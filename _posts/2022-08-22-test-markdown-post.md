@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: 
+description: Emma Shen's super cool post 
 categories: [markdown]
 title: My First Post 
 ---
