@@ -17,4 +17,11 @@ title: My First Post
     <li>I like coding, eating watermelon, and hanging out with friends. If you ever want to do any of these 3 with me, hit me up!!!</li>
 </ul>
 
-<h1>My Icecream flavor Rankings</h1>
+<h1>My Passions</h1>
+<ul>
+    <li>Varsity tennis team</li>
+    <li>Founder of Academics and Athletics for All</li>
+    <li>First Tech Challenge Team. I ❤️ Robotics!! Women in STEM!! </li>
+    <li>Leader in Training at AWANA</li>
+    <>
+</ul>
