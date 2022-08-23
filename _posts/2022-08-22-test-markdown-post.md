@@ -13,7 +13,7 @@ title: My First Post
 
 <h1>A little about me :)</h1>
 <hr>
-<img source="images/copied_from_nb/monarchschoolpic.png">
+<img source="/images/copied_from_nb/monarchschoolpic.png">
 <p> I founded a student-run nonprofit organization called Academics and Athletics for All. Our mission is provide resources for underpriviledged kids to pursue their sports and subject passion. We collect and distribute sports equipment, athletic clothing, and educational materials to kids who need it and hold sports clinics/tutoring events. To learn more, <a href="https://academicsandathleticsforall.org/">click here!</a></p>
 
 ![]({{ site.baseurl }}/images/allstargroupphoto.png "FTC team")
