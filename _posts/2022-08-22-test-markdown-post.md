@@ -8,20 +8,24 @@ title: My First Post
 # Example Markdown Post
 
 **Welcome to My Blog!**
-<h1>A little about me :)</h1>
-![]({{ site.baseurl }}/images/emma-pic.png "fatboi")
-<ul>
-    <li>My name is Emma Shen</li>
-    <li>I am a junior at Del Norte High School</li>
-    <li> I have a twin sister, bet you didn't know that</li>
-    <li>I like coding, eating watermelon, and hanging out with friends. If you ever want to do any of these 3 with me, hit me up!!!</li>
-</ul>
+<h1>Hello!</h1>
+![]({{ site.baseurl }}/images/emma-pic.png "Emma Shen")
+<p>Hi! My name is Emma Shen and I'm a junior at Del Norte High School. I'm an aspiring software developer and interested in AI robotics. I ❤️ boba milk tea and listening to indie pop music 🎵
 
-<h1>My Passions</h1>
+<h1>A little about me :)</h1>
 <ul>
-    <li>Varsity tennis team</li>
-    <li>Founder of Academics and Athletics for All</li>
-    <li>First Tech Challenge Team. I ❤️ Robotics!! Women in STEM!! </li>
-    <li>Leader in Training at AWANA</li>
+    <li>I founded a student-run nonprofit organization called Academics and Athletics for ALl. Our mission is provide resources for underpriviledged kids to pursue their sports and subject passion. We collect and distribute sports equipment, athletic clothing, and educational materials to kids who need it and hold sports clinics/tutoring events.To learn more, click here!</li> 
+    <li>I'm in First Tech Challenge Team Scorpio! We build and program our own robot to compete in tournaments and volunteer to teach robotics to kids in our community!</li>
+    <li>I'm a FLL LEGO Robotics Teacher at Grace All-Star Academy</li>
+    <li>I've been an AWANA clubber for 6 years, and became a Leader in Training 2 years ago. Now, I mentor a group of 3-4 kids in their spiritual journey, fun games, and bible memory verses.</li>
+    <li>I'm on Del Norte's Varsity Tennis team!</li>
     <>
 </ul>
+
+<h1>Some fun facts</hi>
+<ul>
+    <li> I have a twin sister, bet you didn't know that</li>
+    <li>I had a pet chicken but it got mysteriously murdered at 4am in the morning</li>
+    <li>My favorite fruit has and always will be watermelon</li>
+</ul>
+
