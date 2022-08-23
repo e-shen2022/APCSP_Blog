@@ -8,6 +8,7 @@ This website is powered by **[emmashen]** [^1].
 
 <h1>A little about me :)</h1>
 <hr>
+![]({{ site.baseurl }}/images/monarchschoolpic.png "AAA Members at Monarch School")
 <p> I founded a student-run nonprofit organization called Academics and Athletics for All. Our mission is provide resources for underpriviledged kids to pursue their sports and subject passion. We collect and distribute sports equipment, athletic clothing, and educational materials to kids who need it and hold sports clinics/tutoring events. To learn more, <a href="https://academicsandathleticsforall.org/">click here!</a></p>
 
 <p>I'm in First Tech Challenge Team Scorpio. We build and program our own robot to compete in tournaments and volunteer to teach robotics to kids in our community!🤖</p>
