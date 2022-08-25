@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: Emma Shen's super cool post 
 categories: [markdown]
-title: My First Post 
+title: Emma's Blog 
 ---
 
 **Welcome to My Blog!**
