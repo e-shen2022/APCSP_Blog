@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: My APCSP Journey ! 
+description: Del Norte High School 2022-2023  
 categories: [markdown]
-title: APCSP 
+title: My AP CSP Journey 
 ---
 
 **My APCSP Journey**
