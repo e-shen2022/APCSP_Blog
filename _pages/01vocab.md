@@ -24,6 +24,7 @@ permalink: /vocab/
 
 
 **Python syntax** 
+print("")
 
 
 
