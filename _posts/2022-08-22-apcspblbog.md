@@ -8,6 +8,8 @@ title: AP Computer Science Principles Blogging
 
 **Welcome to my APCSP Blog!**
 
+<p>Here is where I will document my learning in AP Computer Science Principles every week!</p>
+
 # Week 1
  - I downloaded all the tools and equipment needed for this class 
  - I learned basic cs vocabulary such as input, output, sequence, and key/value
