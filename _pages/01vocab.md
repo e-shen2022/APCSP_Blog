@@ -12,6 +12,7 @@ permalink: /vocab/
     <li>output = the information the computer gives to you</li>
     <li>sequence = several lines of code together</li>
     <li>key (name) --> value (Emma)</li>
+    <li>Types of variables: Strings, Integers, Float, List, Dictionary</li>
 </ul>
 
 **Python Linux Commmands** 
@@ -20,11 +21,13 @@ permalink: /vocab/
     <li>cd = change directory</li>
     <li>mkdir = make directory</li>
     <li>ls = list directory<li>
+</ul>
 
 
-
-**Python syntax** 
-print("")
+**Lists, Dictionaries, Iterations**
+<ul>
+    <li>index --> position of string in a list</li>
+    <li>
 
 
 

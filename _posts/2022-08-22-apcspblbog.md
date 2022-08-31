@@ -20,3 +20,5 @@ title: AP Computer Science Principles Blogging
  - I searched up by myself how to make my website have a background color and text-align the title in the middle 
  - I made a study guide I can update throughout the year for all of my classes
 
+ # Week 2 
+
