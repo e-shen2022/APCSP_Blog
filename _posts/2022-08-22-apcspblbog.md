@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: "My AP CSP Blog"
-categories: [markdown]
+categories: [markdown, week1]
 title: AP Computer Science Principles Blogging 
 ---
 
