@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Emma Shen's super cool post 
-categories: [markdown]
+categories: [markdown, week0]
 title: Emma's Markdown Post
 ---
 

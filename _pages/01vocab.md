@@ -27,7 +27,9 @@ permalink: /vocab/
 **Lists, Dictionaries, Iterations**
 <ul>
     <li>index --> position of string in a list</li>
-    <li>
+    <li>Lists & Dictionaries used to collect and store information</li>
+    <li>.append(expression) --> adds to list</li>
+    </li>Recursive loops</li>
 
 
 
