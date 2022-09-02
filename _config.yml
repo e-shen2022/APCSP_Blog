@@ -59,9 +59,6 @@ show_tags: true
 # Add your Google Analytics ID here if you have one and want to use it
 google_analytics: 
 
-show_downloads: "true" or "false" (unquoted) to indicate whether to provide a download URL
-google_analytics: Your Google Analytics tracking ID
-
 exclude:
   - docker-compose.yml
   - action.yml
