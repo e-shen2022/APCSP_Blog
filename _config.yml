@@ -37,7 +37,7 @@ url: "https://e-shen2022.github.io" # the base hostname & protocol for your site
 baseurl: "/emma_blog" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
-minima:
+Architect:
   social_links:
     instagram: emmaxshen
 
@@ -81,7 +81,7 @@ html_escape:
 
 # Everything below here should be left alone. Modifications may break fastpages
 future: true
-theme: minima
+theme: Architect
 plugins:
   - jekyll-feed
   - jekyll-gist
@@ -100,7 +100,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme: jekyll/minima
+remote_theme: jekyll/Architect
 
 titles_from_headings:
   enabled:     true
