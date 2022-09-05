@@ -17,45 +17,25 @@ title: My Weekly Progress
         <th>Week 0 </th>
         <th>Week 1 </th>
         <th>Week 2 </th>
-    </tr>
-    <tr>
+   </tr>
+   <tr>
         <td><a href="https://e-shen2022.github.io/emma_blog/markdown/week0/2022/08/22/test-markdown-post.html">Emma's Markdown Post</td>
         <td><a href = "https://e-shen2022.github.io/emma_blog/jupyter/week1/2022/09/01/bash-notebook.html">Bash Tool Checks</td>
         <td><a href = "Lists, Dictionaries, Loops"> Lists, Dictionaries, Loops</td>
-    </tr>
-    <tr>
+   </tr>
+   <tr>
         <td><a href = "https://e-shen2022.github.io/emma_blog/jupyter/week0/2022/08/22/notebook.html"> First Jupyter Notebook</td>
-        <td>9:49 AM</td>
-        <td>10:58 AM</td>
-    </tr>
-    <tr>
-        <td>Break</td>
-        <td>10:58 AM</td>
-        <td>11:08 AM</td>
-    </tr>
-    <tr>
-        <td>Period 3</td>
-        <td>11:13 AM</td>
-        <td>12:22 PM</td>
-    </tr>
-    <tr>
-        <td>Lunch</td>
-        <td>12:22 PM</td>
-        <td>12:52 PM</td>
-    </tr>
-    <tr>
-        <td>Period 4</td>
-        <td>12:57 PM</td>
-        <td>2:06 PM</td>
-    </tr>
-    <tr>
-        <td>Office Hours </td>
-        <td>2:06 PM</td>
-        <td>2:31 PM</td>
-    </tr>
-    <tr>
-        <td>Period 5</td>
-        <td>2:36 PM</td>
-        <td>3:45 PM</td>
-    </tr>
+        <td><a href = "https://e-shen2022.github.io/emma_blog/markdown/week1/2022/08/28/classes.html">AP Physics, APEL, APCSP, and AP Calc BC Study Guide</td>
+        <td><a href="https://e-shen2022.github.io/emma_blog/markdown/week2/2022/08/22/bellschedule.html">DNHS Bell Schedule</td>
+   </tr>
+   <tr>
+        <td><a href = "https://e-shen2022.github.io/emma_blog/jupyter/week0/2020/02/20/test.html"> Fastpages Notebook Blog Post</td>
+        <td><a href="https://e-shen2022.github.io/emma_blog/jupyter/week1/2022/08/26/quiz.html"> Python Quiz</td>
+        <td></td>
+   </tr>
+   <tr>
+        <td></td>
+        <td><a href = "https://e-shen2022.github.io/emma_blog/markdown/week1/2022/08/22/apcspblbog.html">AP Computer Science Principles Blogging</td>
+        <td><a href = "https://e-shen2022.github.io/emma_blog/markdown/week2/2022/09/24/classweeks.html">My Weekly Progress</td>
+   </tr>
 </table>
