@@ -20,7 +20,7 @@ title: My Weekly Progress
    </tr>
    <tr>
         <td><a href="https://e-shen2022.github.io/emma_blog/markdown/week0/2022/08/22/test-markdown-post.html">Emma's Markdown Post</a></td>
-        <td><a href = "https://e-shen2022.github.io/emma_blog/jupyter/week1/2022/09/01/bash-notebook.html">Bash Tool Checks</td>
+        <td><a href = "https://e-shen2022.github.io/emma_blog/jupyter/week1/2022/09/01/bash-notebook.html">Bash Tool Checks</a></td>
         <td><a href = "Lists, Dictionaries, Loops"> Lists, Dictionaries, Loops</a></td>
    </tr>
    <tr>
