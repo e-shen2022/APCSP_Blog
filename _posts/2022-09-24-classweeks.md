@@ -19,23 +19,23 @@ title: My Weekly Progress
         <th>Week 2 </th>
    </tr>
    <tr>
-        <td><a href="https://e-shen2022.github.io/emma_blog/markdown/week0/2022/08/22/test-markdown-post.html">Emma's Markdown Post</td>
+        <td><a href="https://e-shen2022.github.io/emma_blog/markdown/week0/2022/08/22/test-markdown-post.html">Emma's Markdown Post</a></td>
         <td><a href = "https://e-shen2022.github.io/emma_blog/jupyter/week1/2022/09/01/bash-notebook.html">Bash Tool Checks</td>
-        <td><a href = "Lists, Dictionaries, Loops"> Lists, Dictionaries, Loops</td>
+        <td><a href = "Lists, Dictionaries, Loops"> Lists, Dictionaries, Loops</a></td>
    </tr>
    <tr>
-        <td><a href = "https://e-shen2022.github.io/emma_blog/jupyter/week0/2022/08/22/notebook.html"> First Jupyter Notebook</td>
-        <td><a href = "https://e-shen2022.github.io/emma_blog/markdown/week1/2022/08/28/classes.html">AP Physics, APEL, APCSP, and AP Calc BC Study Guide</td>
-        <td><a href="https://e-shen2022.github.io/emma_blog/markdown/week2/2022/08/22/bellschedule.html">DNHS Bell Schedule</td>
+        <td><a href = "https://e-shen2022.github.io/emma_blog/jupyter/week0/2022/08/22/notebook.html"> First Jupyter Notebook</a></td>
+        <td><a href = "https://e-shen2022.github.io/emma_blog/markdown/week1/2022/08/28/classes.html">AP Physics, APEL, APCSP, and AP Calc BC Study Guide</a></td>
+        <td><a href="https://e-shen2022.github.io/emma_blog/markdown/week2/2022/08/22/bellschedule.html">DNHS Bell Schedule</a></td>
    </tr>
    <tr>
-        <td><a href = "https://e-shen2022.github.io/emma_blog/jupyter/week0/2020/02/20/test.html"> Fastpages Notebook Blog Post</td>
-        <td><a href="https://e-shen2022.github.io/emma_blog/jupyter/week1/2022/08/26/quiz.html"> Python Quiz</td>
+        <td><a href = "https://e-shen2022.github.io/emma_blog/jupyter/week0/2020/02/20/test.html"> Fastpages Notebook Blog Post</a></td>
+        <td><a href="https://e-shen2022.github.io/emma_blog/jupyter/week1/2022/08/26/quiz.html"> Python Quiz</a></td>
         <td></td>
    </tr>
    <tr>
         <td></td>
-        <td><a href = "https://e-shen2022.github.io/emma_blog/markdown/week1/2022/08/22/apcspblbog.html">AP Computer Science Principles Blogging</td>
-        <td><a href = "https://e-shen2022.github.io/emma_blog/markdown/week2/2022/09/24/classweeks.html">My Weekly Progress</td>
+        <td><a href = "https://e-shen2022.github.io/emma_blog/markdown/week1/2022/08/22/apcspblbog.html">AP Computer Science Principles Blogging</a></td>
+        <td><a href = "https://e-shen2022.github.io/emma_blog/markdown/week2/2022/09/24/classweeks.html">My Weekly Progress</a></td>
    </tr>
 </table>
