@@ -21,4 +21,10 @@ title: AP Computer Science Principles Blogging
  - I made a study guide I can update throughout the year for all of my classes
 
  # Week 2 
+ - I learned how to use lists and dictionaries 
+ - I learned how to add user input to a dictionary 
+ - I made a cool ceasar cipher that uses a for loop and shift numbers to make an ecoded message 
+ - I learned how to make a table in html
+ - I used css to turn website into dark mode 
+ - I organized my tags into the different weeks, this way I can easily refer to them later 
 
