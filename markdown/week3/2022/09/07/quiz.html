@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -100,14 +100,64 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#creation-1-a-derivative-quiz">Creation 1: A Derivative Quiz</a></li>
+<li class="toc-entry toc-h1"><a href="#1-program-purpose-and-function">1 Program Purpose and Function</a></li>
+<li class="toc-entry toc-h1"><a href="#2-data-abstraction">2 Data Abstraction</a></li>
+<li class="toc-entry toc-h1"><a href="#3-managing-complexity">3 Managing Complexity</a></li>
+<li class="toc-entry toc-h1"><a href="#4-procedural-abstraction">4 Procedural Abstraction</a></li>
+<li class="toc-entry toc-h1"><a href="#5-algorithmn-implementation">5 Algorithmn Implementation</a></li>
+<li class="toc-entry toc-h1"><a href="#6-testingdebugging">6 Testing/Debugging</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#take-aways">Take aways</a></li>
 <li class="toc-entry toc-h2"><a href="#creation-2-are-you-a-summer-or-winter-person">Creation 2: &quot;Are you a Summer or Winter person?&quot;</a></li>
+</ul>
+</li>
 </ul><h2>
 <a class="anchor" href="#creation-1-a-derivative-quiz" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creation 1: A Derivative Quiz</h2>
 <p><a href="https://studio.code.org/projects/applab/UG4i-TtiqO3O2o-eZ9s_RwX3VGww6_tuxwZQi06djMc">Press on me!</a></p>
 
+<h1 id="1-program-purpose-and-function">
+<a class="anchor" href="#1-program-purpose-and-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>1 Program Purpose and Function</h1>
+
 <p><b>Program Purpose</b>: Memory of the many derivatives is essential in succeeding in Calculus. I am currently struggling to remember the derivatives after a summer of no-calculus practice, so I hope this quiz can jog my own memory and help others as well! This program is meant to be a quick and easy study tool for students aking Calculus </p>
 
 <p><b>Functionality:</b> This program is a three-question quiz that tests a student's capability to remember the derivatives of sin(x), cos(x), and tan(x). The app starts on the home page where a text welcomes the user to the quiz, the user presses Start Quiz to begin. Now the user must answer 3 questions. If they answer correctly, "Correct Answer!" text appears. If they answer correctly, "Incorrect Answer" text appears. Regardless if the user gets the problem correct, the screen will change to the next screen within 2 seconds. The last screen is where it gives your resuls: score out of 3. </p>
+
+<h1 id="2-data-abstraction">
+<a class="anchor" href="#2-data-abstraction" aria-hidden="true"><span class="octicon octicon-link"></span></a>2 Data Abstraction</h1>
+
+<p>(simplifies a set of data by representing it in some general way)
+I used data abstraction by creating a variable called “score”. I initialized this variable to 0, and everytime the user answers a question correctly, 1 is added to the current score. In this way, I can record each user’s personal correct answer count in one variable and use it to print out their final score.</p>
+
+<h1 id="3-managing-complexity">
+<a class="anchor" href="#3-managing-complexity" aria-hidden="true"><span class="octicon octicon-link"></span></a>3 Managing Complexity</h1>
+
+<p>??</p>
+
+<h1 id="4-procedural-abstraction">
+<a class="anchor" href="#4-procedural-abstraction" aria-hidden="true"><span class="octicon octicon-link"></span></a>4 Procedural Abstraction</h1>
+
+<p>(when we write code sections which are generalised by having variable parameters. The idea is that we have code which can cope with a variety of different situations, depending on how its parameters are set when it is called.)</p>
+
+<h1 id="5-algorithmn-implementation">
+<a class="anchor" href="#5-algorithmn-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>5 Algorithmn Implementation</h1>
+
+<p>??</p>
+
+<h1 id="6-testingdebugging">
+<a class="anchor" href="#6-testingdebugging" aria-hidden="true"><span class="octicon octicon-link"></span></a>6 Testing/Debugging</h1>
+
+<p><b>Successes</b></p>
+<ul>
+    <li>I made the app fairly user-friendly. I added sounds to make it more entertaining and allowed 2 seconds of rest bewteen each question</li>
+    <li>I think I designed the background and layout pretty well. The colors are soothing and images are interesting to look at</li>
+    <li>I found a way to calculate the user's score using a variable</li>
+</ul>
+
+<p><b>Challenges &amp; Discoveries</b></p>
+<ul>
+    <li>Sometimes I would forget to name each button, element, and image and I would command the wrong one which would make my app just appear to not be doing anything --&gt; For my second creation I made sure to name each element so I don't confuse myself again</li>
+    <li>I couldn't find a way to combine the similar code among different buttons into one chunk. I had to code almost the same exact thing for each wrong answer and each correct answer. Next time I need to utilize for loops and if statements</li>
+</ul>
 
 <p><b>How it works: </b></p>
 <ol>
@@ -124,17 +174,11 @@ window.onload = wrap_img;
     <li>Once the user answers the third question, the screen is taken to the results screen. However, because the score for each user is different, I set the "score_result" text to the variable score that has been accumulating the user's amount of correct answers. </li>
 </ol>
 
-<p><b>Successes</b></p>
+<h2>
+<a class="anchor" href="#take-aways" aria-hidden="true"><span class="octicon octicon-link"></span></a>Take aways</h2>
 <ul>
-    <li>I made the app fairly user-friendly. I added sounds to make it more entertaining and allowed 2 seconds of rest bewteen each question</li>
-    <li>I think I designed the background and layout pretty well. The colors are soothing and images are interesting to look at</li>
-    <li>I found a way to calculate the user's score using a variable</li>
-</ul>
-
-<p><b>Challenges &amp; Discoveries</b></p>
-<ul>
-    <li>Sometimes I would forget to name each button, element, and image and I would command the wrong one which would make my app just appear to not be doing anything --&gt; For my second creation I made sure to name each element so I don't confuse myself again</li>
-    <li>I couldn't find a way to combine the similar code among different buttons into one chunk. I had to code almost the same exact thing for each wrong answer and each correct answer</li>
+  <li>I need to learn how to make a function and pass multiple parameters so that the code can cope with multiple situations. (Procedural Abstraction)</li>
+  <li>I need to become more clear with how to implement Algorithm Implementation and Managing Complexity</li>
 </ul>
 
 <h2>
