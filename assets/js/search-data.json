@@ -249,19 +249,16 @@
   
 
   
-
+      ,"page5": {
+          "title": "Frontend",
+          "content": "FRONTEND JavaScript The Big Idea Scrum Process . .",
+          "url": "https://e-shen2022.github.io/emma_blog/Frontend/",
+          "relUrl": "/Frontend/",
+          "date": ""
+      }
+      
   
 
-  
-  
-
-  
-  
-
-  
-  
-
-  
   
 
   
@@ -270,7 +267,21 @@
   
 
   
-      ,"page13": {
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://e-shen2022.github.io/emma_blog/robots.txt",
