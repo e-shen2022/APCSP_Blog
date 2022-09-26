@@ -7,7 +7,7 @@ title: The Big Idea
 ---
 
 <html>
-<h3><strong>Program Purpose</strong></h3>: <h2>AI algorithm that based on inputs of the user's symptoms, outputs the user's most probably sicknesses! (specifically towards helping user discern between COVID-symptoms and common cold/fever/cough symptoms)</h2>
+<h3><strong>Program Purpose: </strong></h3><p>AI algorithm that based on inputs of the user's symptoms, outputs the user's most probably sicknesses! (specifically towards helping user discern between COVID-symptoms and common cold/fever/cough symptoms)</p>
 
 <h3>Roles</h3>
 <ul>
