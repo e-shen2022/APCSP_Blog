@@ -83,7 +83,7 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="s2">&quot;Hello, Emma!&quot;</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
 </pre></div>
 
@@ -97,7 +97,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello, World!
+<pre>Hello, Emma!
 </pre>
 </div>
 </div>
@@ -146,7 +146,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello, World!
+<pre>Hello, Emma!
 </pre>
 </div>
 </div>
@@ -340,12 +340,10 @@ string ; {&#34;name&#34;:&#34;Mr M&#34;,&#34;ghID&#34;:&#34;jm1021&#34;,&#34;cla
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define a student Array of Person(s)</span>
 <span class="kd">var</span> <span class="nx">students</span> <span class="o">=</span> <span class="p">[</span> 
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Anthony&quot;</span><span class="p">,</span> <span class="s2">&quot;tonyhieu&quot;</span><span class="p">,</span> <span class="mf">2022</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Bria&quot;</span><span class="p">,</span> <span class="s2">&quot;B-G101&quot;</span><span class="p">,</span> <span class="mf">2023</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Allie&quot;</span><span class="p">,</span> <span class="s2">&quot;xiaoa0&quot;</span><span class="p">,</span> <span class="mf">2023</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Tigran&quot;</span><span class="p">,</span> <span class="s2">&quot;Tigran7&quot;</span><span class="p">,</span> <span class="mf">2023</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Rebecca&quot;</span><span class="p">,</span> <span class="s2">&quot;Rebecca-123&quot;</span><span class="p">,</span> <span class="mf">2023</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Vidhi&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">,</span> <span class="mf">2024</span><span class="p">)</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Emma&quot;</span><span class="p">,</span> <span class="s2">&quot;e-shen2022&quot;</span><span class="p">,</span> <span class="mf">2024</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Vivian&quot;</span><span class="p">,</span> <span class="s2">&quot;vivianknee&quot;</span><span class="p">,</span> <span class="mf">2024</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Amay&quot;</span><span class="p">,</span> <span class="s2">&quot;amayadvani&quot;</span><span class="p">,</span> <span class="mf">2024</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Sarah&quot;</span><span class="p">,</span> <span class="s2">&quot;sarahliu2006&quot;</span><span class="p">,</span> <span class="mf">2024</span><span class="p">)</span>
 <span class="p">];</span>
 
 <span class="c1">// define a classroom and build Classroom objects and json</span>
@@ -384,23 +382,25 @@ string ; {&#34;name&#34;:&#34;Mr M&#34;,&#34;ghID&#34;:&#34;jm1021&#34;,&#34;cla
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>object ; [ Person { name: &#39;Mr M&#39;, ghID: &#39;jm1021&#39;, classOf: 1977, role: &#39;Teacher&#39; },
   Person {
-    name: &#39;Anthony&#39;,
-    ghID: &#39;tonyhieu&#39;,
-    classOf: 2022,
-    role: &#39;Student&#39; },
-  Person { name: &#39;Bria&#39;, ghID: &#39;B-G101&#39;, classOf: 2023, role: &#39;Student&#39; },
-  Person { name: &#39;Allie&#39;, ghID: &#39;xiaoa0&#39;, classOf: 2023, role: &#39;Student&#39; },
-  Person {
-    name: &#39;Tigran&#39;,
-    ghID: &#39;Tigran7&#39;,
-    classOf: 2023,
+    name: &#39;Emma&#39;,
+    ghID: &#39;e-shen2022&#39;,
+    classOf: 2024,
     role: &#39;Student&#39; },
   Person {
-    name: &#39;Rebecca&#39;,
-    ghID: &#39;Rebecca-123&#39;,
-    classOf: 2023,
+    name: &#39;Vivian&#39;,
+    ghID: &#39;vivianknee&#39;,
+    classOf: 2024,
     role: &#39;Student&#39; },
-  Person { name: &#39;Vidhi&#39;, ghID: &#39;unknown&#39;, classOf: 2024, role: &#39;Student&#39; } ]
+  Person {
+    name: &#39;Amay&#39;,
+    ghID: &#39;amayadvani&#39;,
+    classOf: 2024,
+    role: &#39;Student&#39; },
+  Person {
+    name: &#39;Sarah&#39;,
+    ghID: &#39;sarahliu2006&#39;,
+    classOf: 2024,
+    role: &#39;Student&#39; } ]
 string ; Mr M
 string ; {&#34;name&#34;:&#34;Mr M&#34;,&#34;ghID&#34;:&#34;jm1021&#34;,&#34;classOf&#34;:1977,&#34;role&#34;:&#34;Teacher&#34;}
 object ; { name: &#39;Mr M&#39;, ghID: &#39;jm1021&#39;, classOf: 1977, role: &#39;Teacher&#39; }
@@ -443,8 +443,8 @@ object ; { name: &#39;Mr M&#39;, ghID: &#39;jm1021&#39;, classOf: 1977, role: &#
     <span class="kd">var</span> <span class="nx">style</span> <span class="o">=</span> <span class="p">(</span>
       <span class="s2">&quot;display:inline-block;&quot;</span> <span class="o">+</span>
       <span class="s2">&quot;background:black;&quot;</span> <span class="o">+</span>
-      <span class="s2">&quot;border: 2px solid grey;&quot;</span> <span class="o">+</span>
-      <span class="s2">&quot;box-shadow: 0.8em 0.4em 0.4em grey;&quot;</span>
+      <span class="s2">&quot;border: 2px solid white;&quot;</span> <span class="o">+</span>
+      <span class="s2">&quot;box-shadow: 0.8em 0.4em 0.4em blue;&quot;</span>
     <span class="p">);</span>
   
     <span class="c1">// HTML Body of Table is build as a series of concatenations (+=)</span>
@@ -495,7 +495,7 @@ object ; { name: &#39;Mr M&#39;, ghID: &#39;jm1021&#39;, classOf: 1977, role: &#
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<div style='display:inline-block;background:black;border: 2px solid grey;box-shadow: 0.8em 0.4em 0.4em grey;'><table><tr><th><mark>Name</mark></th><th><mark>GitHub ID</mark></th><th><mark>Class Of</mark></th><th><mark>Role</mark></th></tr><tr><td>Mr M</td><td>jm1021</td><td>1977</td><td>Teacher</td><tr><tr><td>Anthony</td><td>tonyhieu</td><td>2022</td><td>Student</td><tr><tr><td>Bria</td><td>B-G101</td><td>2023</td><td>Student</td><tr><tr><td>Allie</td><td>xiaoa0</td><td>2023</td><td>Student</td><tr><tr><td>Tigran</td><td>Tigran7</td><td>2023</td><td>Student</td><tr><tr><td>Rebecca</td><td>Rebecca-123</td><td>2023</td><td>Student</td><tr><tr><td>Vidhi</td><td>unknown</td><td>2024</td><td>Student</td><tr></table></div>
+<div style='display:inline-block;background:black;border: 2px solid white;box-shadow: 0.8em 0.4em 0.4em blue;'><table><tr><th><mark>Name</mark></th><th><mark>GitHub ID</mark></th><th><mark>Class Of</mark></th><th><mark>Role</mark></th></tr><tr><td>Mr M</td><td>jm1021</td><td>1977</td><td>Teacher</td><tr><tr><td>Emma</td><td>e-shen2022</td><td>2024</td><td>Student</td><tr><tr><td>Vivian</td><td>vivianknee</td><td>2024</td><td>Student</td><tr><tr><td>Amay</td><td>amayadvani</td><td>2024</td><td>Student</td><tr><tr><td>Sarah</td><td>sarahliu2006</td><td>2024</td><td>Student</td><tr></table></div>
 </div>
 
 </div>
