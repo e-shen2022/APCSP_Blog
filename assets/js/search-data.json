@@ -57,10 +57,10 @@
   
     
         ,"post5": {
-            "title": "Create Performance Task",
-            "content": "Idea . Technical Requirements . What I need to learn .",
-            "url": "https://e-shen2022.github.io/emma_blog/markdown/week3/2022/09/12/performancetask.html",
-            "relUrl": "/markdown/week3/2022/09/12/performancetask.html",
+            "title": "The Big Idea",
+            "content": "Idea . Program Purpose: AI algorithm that based on inputs of the user’s symptoms, outputs the user’s most probably sicknesses! (specifically towards helping user discern between COVID-symptoms and common cold/fever/cough symptoms) . Roles . Scrum Master: Emma Shen DevOP: Amay Advani Frontend Developer: Vivian Ni Backend Developer: Sarah Liu .",
+            "url": "https://e-shen2022.github.io/emma_blog/markdown/2022/09/12/performancetask.html",
+            "relUrl": "/markdown/2022/09/12/performancetask.html",
             "date": " • Sep 12, 2022"
         }
         
