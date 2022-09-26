@@ -41,7 +41,7 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello, Emma!&quot;</span><span class="p">);</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello, Emma!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -220,10 +220,10 @@ Hello, Students!
 <div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">logItType</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">output</span><span class="p">,</span> <span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="nx">output</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Looking at dynamic nature of types in JavaScript&quot;</span><span class="p">)</span>
-<span class="nx">logItType</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">);</span> <span class="c1">// String</span>
-<span class="nx">logItType</span><span class="p">(</span><span class="mf">2020</span><span class="p">);</span>    <span class="c1">// Number</span>
-<span class="nx">logItType</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">]);</span>  <span class="c1">// Object is generic for this Array, which similar to Python List</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Types of variables in JavaScript&quot;</span><span class="p">)</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="s2">&quot;AP Computer Science Principles&quot;</span><span class="p">);</span> <span class="c1">// String</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="mf">32</span> <span class="o">/</span> <span class="mf">2</span><span class="p">);</span>    <span class="c1">// Number</span>
+<span class="nx">logItType</span><span class="p">([</span><span class="s2">&quot;Emma&quot;</span><span class="p">,</span> <span class="s2">&quot;Vivian&quot;</span><span class="p">,</span> <span class="s2">&quot;Sarah&quot;</span><span class="p">,</span> <span class="s2">&quot;Amay&quot;</span><span class="p">]);</span>  <span class="c1">// Object is generic for this Array, which similar to Python List</span>
 </pre></div>
 
     </div>
@@ -236,10 +236,10 @@ Hello, Students!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Looking at dynamic nature of types in JavaScript
-string ; hello
-number ; 2020
-object ; [ 1, 2, 3 ]
+<pre>Types of variables in JavaScript
+string ; AP Computer Science Principles
+number ; 16
+object ; [ &#39;Emma&#39;, &#39;Vivian&#39;, &#39;Sarah&#39;, &#39;Amay&#39; ]
 </pre>
 </div>
 </div>
