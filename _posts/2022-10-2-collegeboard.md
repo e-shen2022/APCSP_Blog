@@ -24,3 +24,9 @@ Program Design and Development
 Program Function and Purpose 
 - DISPLAY --> "print()"
 - if statement commonly used when comparing one variable to another ex. (if x > y)
+
+**10/7** 
+
+The Internet
+- a message is broken into packets --> packets can be recieved in any order and still be reassembled by the recipient's device 
+- 
