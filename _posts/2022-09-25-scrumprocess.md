@@ -12,5 +12,5 @@ title: Group Project
 ![]({{ site.baseurl }}/images/scrumprocess.png "Scrum Process")
 
 **Our College Board Task Plan**
-Link: https://docs.google.com/document/d/1tdgUGrS3u-WGgLn2KSIORgy7HZc39dfZZi0COd-oVTk/edit?usp=sharing
+[Link](https://docs.google.com/document/d/1tdgUGrS3u-WGgLn2KSIORgy7HZc39dfZZi0COd-oVTk/edit?usp=sharing)
 
