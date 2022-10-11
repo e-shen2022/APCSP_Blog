@@ -37,7 +37,7 @@ title: College Board Learning Notes
 - The World Wide Web is a system of linked pages, programs, and files that is accessed via a network called the Internet.
 
 <u>Correcting and Identifying Errors 2/3</u>
-- <mark>look through each test case</mark>--> evaluate line of reasoning 
+- <mark>look through each test case</mark>--> evaluate line of reasoning!!!
 
 
 
