@@ -17,6 +17,11 @@ title: My Weekly Progress
         <th>Week 0 </th>
         <th>Week 1 </th>
         <th>Week 2 </th>
+        <th>Week 3 </th>
+        <th>Week 4 </th>
+        <th>Week 5 </th>
+        <th>Week 6 </th>
+        <th>Week 7 </th>
    </tr>
    <tr>
         <td><a href="https://e-shen2022.github.io/emma_blog/markdown/week0/2022/08/22/test-markdown-post.html">Emma's Markdown Post</a></td>
