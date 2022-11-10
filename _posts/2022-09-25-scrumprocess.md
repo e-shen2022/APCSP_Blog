@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Collaboration!
-categories: [markdown]
+categories: [markdown, week7]
 title: Group Project 
 ---
 

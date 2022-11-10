@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: "End of Trimester project planning"
-categories: [markdown]
+categories: [markdown, week5]
 title: The Big Idea 
 ---
 
