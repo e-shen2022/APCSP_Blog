@@ -37,8 +37,8 @@
         ,"post3": {
             "title": "Trimester 1 Final MC",
             "content": "I got a 45/50 on the Tri 1 Final MC: . Explanation: Answer choice D is wrong because in the code you can see the loop repeats until count is greater than max, therefore all printed positive integers are LESS THAN max. . Explanation: Protocols are agreed-upon sets of rules that specify the behavior of a system. Protocols used on the Internet enable devices from different manufacturers to communicate in a standard way. . Explanation: Answer choice C is the best answer ebcause meaningful variable names are used to improve readability in the code segment. . Explanation: The code segment initializes firstList to contain [“guitar”, “drums”, “bass”], secondList to contain [“flute”, “violin”], and thirdList to contain an empty list. The code segment then swaps the contents of firstList and secondList by assigning firstList to thirdList, then secondList to firstList, then thirdList to secondList. . Explanation: Answer choice A and D are correct. I forgot to check Answer A. This code segment sets maxPS to 50 by default, then uses the IF statement to set maxPS to 30 when time &gt; 120. .",
-            "url": "https://e-shen2022.github.io/emma_blog/markdown/2022/11/07/tri1mc.html",
-            "relUrl": "/markdown/2022/11/07/tri1mc.html",
+            "url": "https://e-shen2022.github.io/emma_blog/markdown/final/2022/11/07/tri1mc.html",
+            "relUrl": "/markdown/final/2022/11/07/tri1mc.html",
             "date": " • Nov 7, 2022"
         }
         
@@ -146,7 +146,7 @@
     
         ,"post13": {
             "title": "My Weekly Progress",
-            "content": "Week 0 Week 1 Week 2 Week 3 Week 4 Week 5 Week 6 Week 7 . Emma&#39;s Markdown Post | Bash Tool Checks | Lists, Dictionaries, Loops | . First Jupyter Notebook | AP Physics, APEL, APCSP, and AP Calc BC Study Guide | DNHS Bell Schedule | . Fastpages Notebook Blog Post | Python Quiz | | . | AP Computer Science Principles Blogging | My Weekly Progress | . .",
+            "content": "Week 0 Week 1 Week 2 Week 3 Week 4 Week 5 Week 6 Week 7 . Emma&#39;s Markdown Post | Bash Tool Checks | Lists, Dictionaries, Loops | . First Jupyter Notebook | AP Physics, APEL, APCSP, and AP Calc BC Study Guide | DNHS Bell Schedule | . Fastpages Notebook Blog Post | Python Quiz | My Weekly Progress | . | AP Computer Science Principles Blogging | . App Lab Quiz | . Focus and Habits | Docker Server | . JavaScript and HTML | Javascript Tutorial | The Big Idea | . College Board Learning | . Error Testing | Group Project | . .",
             "url": "https://e-shen2022.github.io/emma_blog/markdown/week2/2022/09/04/classweeks.html",
             "relUrl": "/markdown/week2/2022/09/04/classweeks.html",
             "date": " • Sep 4, 2022"
