@@ -95,6 +95,25 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
+# Github and twitter are optional:
+minima:
+  skin: dark
+  #  social_links:
+  #    twitter: NighthawkCoding
+  #    github: nighthawkcoders
+  #   youtube_channel: UClIKOsDS5dsfzFA3zveDT3Q
+  social_links:
+    - { platform: github, user_url: ”
+https://github.com/nighthawkcoders
+“}
+    - { platform: twitter, user_url: ”
+https://twitter.com/NighthawkCoding
+“}
+    - { platform: youtube, user_url: ”
+https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q
+“}
+
+
 # See https://jekyllrb.com/docs/pagination/
 # For pagination to work, you cannot have index.md at the root of your repo, instead you must rename this file to index.html
 paginate: 15
