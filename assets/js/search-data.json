@@ -68,10 +68,10 @@
   
     
         ,"post6": {
-            "title": "Trimester 1 Final MC",
-            "content": "I got a 45/50 on the Tri 1 Final MC: . Explanation: Answer choice D is wrong because in the code you can see the loop repeats until count is greater than max, therefore all printed positive integers are LESS THAN max. . Explanation: Protocols are agreed-upon sets of rules that specify the behavior of a system. Protocols used on the Internet enable devices from different manufacturers to communicate in a standard way. . Explanation: Answer choice C is the best answer ebcause meaningful variable names are used to improve readability in the code segment. . Explanation: The code segment initializes firstList to contain [“guitar”, “drums”, “bass”], secondList to contain [“flute”, “violin”], and thirdList to contain an empty list. The code segment then swaps the contents of firstList and secondList by assigning firstList to thirdList, then secondList to firstList, then thirdList to secondList. . Explanation: Answer choice A and D are correct. I forgot to check Answer A. This code segment sets maxPS to 50 by default, then uses the IF statement to set maxPS to 30 when time &gt; 120. .",
-            "url": "https://e-shen2022.github.io/emma_blog/markdown/final/2022/11/07/tri1mc.html",
-            "relUrl": "/markdown/final/2022/11/07/tri1mc.html",
+            "title": "Unit 3 Section 1-2 Hacks",
+            "content": "Wrong Answer Explanations . Binary Hacks Q3 254 –&gt; binary My Answer: 11111111 Correct Answer: 11111110 Answer explanation: I forgot that the decimal place on the very right indicates if the number is odd or not. Since 254 is even, I know that the digit on very right should be 0, not 1. . Homework/Hacks Q9 My Answer: 7. 1, 3, 4 Correct Answer: 6. 1, 4 Answer explanation: I momentarily forgot that index starts at 0, therefore Avocado in the list would be index 4 . Reflection Today I learned about variables, how to name them, types of variables, lists, and binary numbers. String –&gt; a word or group of characters not be changed numerically, just a phrase (ex. “hello”, “858-705-5930”) Boolean –&gt; True of False Integer –&gt; whole number Float –&gt; number with decimal point Name a variable thoughtfully, not just randomly. (ex. If you were naming a boolean variable to determine if an object is the color pink, name the variable isPink.) Lists - you can combine lists together, and have multiple types of variables in a list Converting binary to decimal numbers is just a matter of knowing what each decimal point represents. .",
+            "url": "https://e-shen2022.github.io/emma_blog/frontend/binary",
+            "relUrl": "/frontend/binary",
             "date": " • Nov 7, 2022"
         }
         
