@@ -28,4 +28,4 @@ Integer --> whole number
 Float --> number with decimal point 
 Name a variable thoughtfully, not just randomly. (ex. If you were naming a boolean variable to determine if an object is the color pink, name the variable isPink.)
 Lists - you can combine lists together, and have multiple types of variables in a list
-Converting binary to decimal numbers is just a matter of knowing what each decimal point represents. 
+Converting binary to decimal numbers is just a matter of knowing what each decimal point represents.
