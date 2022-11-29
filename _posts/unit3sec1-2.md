@@ -1,9 +1,10 @@
 ---
-toc: true
-layout: post
-description: Fun!
-categories: [markdown]
 title: Unit 3 Section 1-2 Hacks 
+layout: default
+description: Fun!
+permalink: /frontend/binary
+categories: [markdown]
+tags: [unit3]
 ---
 
 **Wrong Answer Explanations**
