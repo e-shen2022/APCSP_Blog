@@ -391,8 +391,8 @@ At the end, you see a fairly complicated data structure. This is a list of dicti
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>['Gaming', 'Swimming', 'Cooking']
-[{'FirstName': 'Emma', 'LastName': 'Shen', 'Gender': 'Female', 'DOB': 'July 29', 'Residence': 'San Diego', 'Email': 'aimashen.2017@gmail.com', 'PhoneNumber': '858-705-5930', 'Age': '16', 'Hobbies': ['tennis', 'listening to music', 'baking']}, {'FirstName': 'Vivian', 'LastName': 'Ni', 'Gender': 'Female', 'DOB': 'May 13', 'Residence': 'San Diego', 'Email': 'vivianni452@gmail.com', 'PhoneNumber': '410-227-5596', 'Age': '16', 'Hobbies': ['art', 'cybersecurity', 'graphic design']}, {'FirstName': 'Alan ', 'LastName': 'Shen', 'Gender': 'Male', 'DOB': 'November 14', 'Residence': 'Arizona', 'Email': 'alanshen@gmail.com', 'PhoneNumber': '858-860-4999', 'Age': '21', 'Hobbies': ['Gaming', 'Swimming', 'Cooking']}]
+<pre>['eating', '', '']
+[{'FirstName': 'Emma', 'LastName': 'Shen', 'Gender': 'Female', 'DOB': 'July 29', 'Residence': 'San Diego', 'Email': 'aimashen.2017@gmail.com', 'PhoneNumber': '858-705-5930', 'Age': '16', 'Hobbies': ['Tennis', 'Listening to music', 'Baking']}, {'FirstName': 'Vivian', 'LastName': 'Ni', 'Gender': 'Female', 'DOB': 'May 13', 'Residence': 'San Diego', 'Email': 'vivianni452@gmail.com', 'PhoneNumber': '410-227-5596', 'Age': '16', 'Hobbies': ['Art', 'Cybersecurity', 'Graphic design']}, {'FirstName': 'alexa', 'LastName': 'murphy', 'Gender': 'female', 'DOB': 'july 28', 'Residence': 'la', 'Email': 'alfjweoef@gmail.com', 'PhoneNumber': '868-494-2938', 'Age': '19', 'Hobbies': ['eating', '', '']}]
 </pre>
 </div>
 </div>
@@ -516,7 +516,7 @@ In coding, there are usually many ways to achieve the same result. Defined are f
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">):</span>
         <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
         <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span>
 
@@ -535,33 +535,9 @@ In coding, there are usually many ways to achieve the same result. Defined are f
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>While loop output
 
-Emma Shen
-	 Gender: Female
-	 Birth Day: July 29
-	 Residence: San Diego
-	 Email: aimashen.2017@gmail.com
-	 Phone Number: 858-705-5930
-	 Age: 16
-	 Hobbies: tennis, listening to music, baking
-
-Vivian Ni
-	 Gender: Female
-	 Birth Day: May 13
-	 Residence: San Diego
-	 Email: vivianni452@gmail.com
-	 Phone Number: 410-227-5596
-	 Age: 16
-	 Hobbies: art, cybersecurity, graphic design
-
-Alan  Shen
-	 Gender: Male
-	 Birth Day: November 14
-	 Residence: Arizona
-	 Email: alanshen@gmail.com
-	 Phone Number: 858-860-4999
-	 Age: 21
-	 Hobbies: Gaming, Swimming, Cooking
-
+{'FirstName': 'Emma', 'LastName': 'Shen', 'Gender': 'Female', 'DOB': 'July 29', 'Residence': 'San Diego', 'Email': 'aimashen.2017@gmail.com', 'PhoneNumber': '858-705-5930', 'Age': '16', 'Hobbies': ['Tennis', 'Listening to music', 'Baking']}
+{'FirstName': 'Vivian', 'LastName': 'Ni', 'Gender': 'Female', 'DOB': 'May 13', 'Residence': 'San Diego', 'Email': 'vivianni452@gmail.com', 'PhoneNumber': '410-227-5596', 'Age': '16', 'Hobbies': ['Art', 'Cybersecurity', 'Graphic design']}
+{'FirstName': 'alexa', 'LastName': 'murphy', 'Gender': 'female', 'DOB': 'july 28', 'Residence': 'la', 'Email': 'alfjweoef@gmail.com', 'PhoneNumber': '868-494-2938', 'Age': '19', 'Hobbies': ['eating', '', '']}
 </pre>
 </div>
 </div>
