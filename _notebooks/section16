@@ -1,0 +1,97 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Hacks for simulations\n",
+    "- comments: true\n",
+    "- toc: true"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Answer table\n",
+    "\n",
+    "Comment on this [blog post](https://edwinkuttappi.github.io/farmers/2022/11/17/hacks.html) to submit your hacks. <br> <br>\n",
+    "Fill out the table with your full name and the LETTER of each answer for every question. **In order to receive any credit you must fill out the answer table according to the directions!** Each question is worth .1 points. To get >0.9/1 you can show your understanding in the area labeled extra. \n",
+    "\n",
+    "|Question|Answer |\n",
+    "|---|---|\n",
+    "|Name(First+Last)||\n",
+    "|1||\n",
+    "|2||\n",
+    "|3||\n",
+    "|4||\n",
+    "|5||\n",
+    "|6||\n",
+    "|7||\n",
+    "|8||\n",
+    "|9||\n",
+    "\n",
+    "### Extra \n",
+    "> Show your understanding. You could make a simple simulation, define vocab, etc."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## WHAT QUESTIONS\n",
+    "\n",
+    "3: What is not a reason to use a pseudo-random number generator when making a simulation?\n",
+    "\n",
+    "<br>A: To mock imperfections from the real world<br>B: To save resources <br>C: To make the simulation more accurate<br>\n",
+    "\n",
+    "4: Which of the following is the least likely factor to be removed from a flight(air traffic) simulation for functionality?\n",
+    "<br>A: Weather<br>B: Other aircraft<br>C: Imperfections on aircraft\n",
+    "\n",
+    "## Experiment/Calculation or Simulation\n",
+    "\n",
+    "5: What is not (usually) a difference between a experiment and a simulation?\n",
+    "<br>A: Resources and time needed <br>B: Factors considered <br>C: Situation considered\n",
+    "\n",
+    "**For each situation answer: Would it make more sense to use a simulation or a experiment/calculation?**\n",
+    "\n",
+    "6: A car company needs to know how safe it's customers will be if it's new car crashes\n",
+    "<br>A: Simulation <br>B: Experiment/calculation<br>\n",
+    "\n",
+    "7: A environmental group wants an accurate guess on the impact the greenhouse effect will have on the environment\n",
+    "<br>A: Simulation <br>B: Experiment/calculation<br>\n",
+    "\n",
+    "9: A teacher want's to find the average score from a final \n",
+    "<br>A: Simulation <br>B: Experiment/calculation\n",
+    "\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3.10.6 64-bit",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.6"
+  },
+  "orig_nbformat": 4,
+  "vscode": {
+   "interpreter": {
+    "hash": "b0fa6594d8f4cbf19f97940f81e996739fb7646882a419484c72d19e05852a7e"
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
