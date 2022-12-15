@@ -6,7 +6,7 @@ categories: [markdown]
 title: Unit 2 Vocabulary 
 ---
 
-<h2>Unit 2… Binary/Data Terms</h2>
+<h2>Unit 2: Binary/Data Terms</h2>
 
 <strong>Bits</strong>: A bit or a binary digit, is the smallest unit of data that a computer can process and store. A bit can be one of 2 physical states, such as either 0 or 1, yes or no, and true or false. 
 
@@ -62,6 +62,7 @@ Ex. rgb(255, 0, 0) = red because red is set to its highest value (255), and the 
 
 <strong>Lossless (unit 3)</strong>: Every bit of data originally in a file remains after it is uncompressed, and all the information is restored.
 
+<h2>Unit 3: Algorithms Binary/Data Terms</h2>
 
 <strong>Variables</strong>:An abstraction inside a program that holds a specific value or meaning defined by the programmer.
 
