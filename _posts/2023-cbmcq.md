@@ -10,7 +10,7 @@ Score:
 ![]({{ site.baseurl }}/images/tri2cbmcq.png "Score")
 
 
-Reflection: 
+<mark>Reflection: </mark>
 
 <strong>Question 1 </strong>
 ![]({{ site.baseurl }}/images/question1.png "Question 1")
