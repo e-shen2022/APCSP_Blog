@@ -1,100 +1,41 @@
 ---
 toc: true
 layout: post
-description: College Board 
+description: Art comes in many forms 
 categories: [markdown, tri2]
-title: College Board scoring for Sample Responses
+title: Night @ The Museum Blog Post! 
 ---
 
-<html>
-<h2>Sample 1</h2>
-<table>
-    <tr>
-        <th>Reporting category</th>
-        <th>Score</th>
-        <th>Reasoning</th>
-    </tr>
-    <tr>
-        <th>Row 1 Program Purpose and Function</th>
-        <th>1</th>
-        <th>Video shows clear input, functionality, and output. (3a) Write up describes overall purpose, functionality, and inputs/outputs of program</th>
-    </tr>
-    <tr>
-        <th>Row 2 Data Abstraction</th>
-        <th>1</th>
-        <th>(3b) Write up shows 2 coding segments that shows how data has been stored in the list, and data in that list being used to fulfill program purpose. There is more than 1 element in the list. </th>
-    </tr>
-    <tr>
-        <th>Row 3 Managing Complexity</th>
-        <th>1</th>
-        <th>(3B) write up: clearly shows how using list manages complexity of program purpose. Considers situation if sideIndex is not used and proves its usefulness. </th>
-    </tr>
-    <tr>
-        <th>Row 4 Procedural Abstraction</th>
-        <th>1</th>
-        <th>(3c) write up: student-developed procedure with 3 parameters. describes identified procedure and how contrbute to functionality of the code</th>
-    </tr>
-    <tr>
-        <th>Row 5 Algorithm Implementation</th>
-        <th>1</th>
-        <th>(3c) write up: includes sequencing, selection, and interation. explains in detail</th>
-    </tr>
-    <tr>
-        <th>Row 6 Testing</th>
-        <th>1</th>
-        <th>(3d and 3c) write up: describes 2 cells. conditions being tested. identify result </th>
-    </tr>
+<h1>Ceramics 🍶🏺⚱</h1>
 
-</table>
+![]({{ site.baseurl }}/images/potterycool.png "Pottery is cool!")
 
-Comparing to College Board rubric: 
+I really enjoyed the artwork from the ceramics students. While when I think of the word "art" I usually think of  sketches, paintings, and more stereotypical art forms, it is important to recognize and appreciate mediums such as forming unique figures made of clay and hardening them into practical and artistic objects. The students made a variety of structures such as teapots, statues, plates, cups, and more. They all had their own color theme and ideas. A few of my personal favorites was a tea cup that was in the shape of a turtle and the body was in the texture of a turtle's shell, a cup that had a simple but elegant look with vines growing around the surface, and snakes that curled around a cup that looked like it was for when you brush your teeth and need to wash your mouth with water. However, my favorite favorite was this art piece: 
 
-Row 1 did not recieve credit because student describes functionality but not PURPOSE of program. Why did he create a program that gives info about trig side lengths? 
+![]({{ site.baseurl }}/images/bat.png "Jumpscare")
 
-Row 3 did not recieve credit because the list is not neccessary for the functionality of the program. To be necessary the items in the list should be looped through and checked. But in this case, the return statements are not needed, you could just print those words to output "Classification by side"
+Although the first time I laid eyes on it I physically flinched, the more I looked at the more I was in awe of how realistically gory and perfectly crafted it was. The most prominent aspect was the way the bat was able to balance and not fall over while being "stuck" in the human's mouth. The person's facial expression also just speaks to me in the way that they seeem surprised and eerie at the same time. Makes me think whether this person is forced to eat the bat or not. Anyways, just wanted to share this one with y'all. 
+
+<h1>Drawing & Painting🎨🖌️🖼️</h1>
+
+![]({{ site.baseurl }}/images/chinese.png "Home")
+
+When I was first browsing this painting I felt an indescribable sense of warmth. For me, I saw my grandmother and grandfather feeding me authentic chinese dishes made with love. The last time I went to my family's hometown was 6 years ago. It's been too long and this image brings me back to the qing zheng yu which means natural fish in Chinese that was my favorite dish. I can see my grandmother's enthusiastic smile and chopstick feeding me noodles and my grandfather's wholesome eye smile as he drinks his soup. I feel at home here. 
+
+<h1>I'm not sure what class this was ◡̈</h1>
+
+![]({{ site.baseurl }}/images/cpt.png "Literally our CPT!")
+
+Here is just a cute little selfie pic of Sanika, Ishi, and I posing next to these photos of skin care products because we are CSP!!! Customized Skin Products!!
+
+<h1>AP Computer Science A 💻</h1>
+
+One project I really liked in Mort's room was one where any student at DNHS can submit their club to be on a master sheet and other students can leave their reviews of the clubs. I think that this is a website needed at our school and would organize information very nicely and be very helpful for people looking to join activities they are interested in. Having an alumni review of what the club is like and what they gained from it is very cool!
+
+![]({{ site.baseurl }}/images/dnhsclubs.png "1")
+![]({{ site.baseurl }}/images/dnhsclubs2.png "2")
 
 
-<h2>Sample 2</h2>
-<table>
-    <tr>
-        <th>Reporting category</th>
-        <th>Score</th>
-        <th>Reasoning</th>
-    </tr>
-    <tr>
-        <th>Row 1 Program Purpose and Function</th>
-        <th>1</th>
-        <th>Video fills up until 59s. Shows multiple examples of how an input would result in an output of the blocks dancing in different formations.(3a) Write up describes overall purpose, functionality, and inputs/outputs of program</th>
-    </tr>
-    <tr>
-        <th>Row 2 Data Abstraction</th>
-        <th>1</th>
-        <th>(3b) Write up shows 2 coding segments that shows how data has been stored in the list, and data in that list being used to fulfill program purpose. There is more than 1 element in the list. The captions help show program's components as well as abstraction of data.</th>
-    </tr>
-    <tr>
-        <th>Row 3 Managing Complexity</th>
-        <th>1</th>
-        <th>(3B) write up: clearly shows how using list manages complexity of program purpose. </th>
-    </tr>
-    <tr>
-        <th>Row 4 Procedural Abstraction</th>
-        <th>1</th>
-        <th>(3c) write up: includes two program code segments: one showing a student-developed procedure with at least one parameter that has an effect on the functionality of the procedure. (1) one showing where the student-developed procedure is being called.(2) describes what the identified procedure does and how it contributes to the overall functionality of the program.</th> 
-    </tr>
-    <tr>
-        <th>Row 5 Algorithm Implementation</th>
-        <th>1</th>
-        <th>(3c) write up: includes a program code segment of a student-developed algorithm that includes sequencing, selection, and iteration. explains in detailed steps how the identified algorithm works in enough detail that someone else could recreate it.</th>
-    </tr>
-    <tr>
-        <th>Row 6 Testing</th>
-        <th>1</th>
-        <th>(3d and 3c) write up: describes two calls to the selected procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute.describes the condition(s) being tested by each call to the procedure. identifies the result of each call. </th>
-    </tr>
 
-</table>
 
-Comparing to College Board rubric: 6/6
-- no difference between my scoring and college board rubric
-- very thorough and unique game function 
-</html>
+
