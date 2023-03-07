@@ -7,4 +7,3 @@ title: College Board MC Tri 2 Blog Reflection
 ---
 # Example Markdown Post
 
-afhoweuhwoeufhwoefuhwofuefwe
