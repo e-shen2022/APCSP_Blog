@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -190,13 +190,13 @@ window.onload = wrap_img;
 <li>Comment on where you have observed these working?</li>
 </ul>
 <ol>
-<li>
-<p>Flask app object</p>
-</li>
-<li>
-<p>SQLAlchemy object</p>
-</li>
+<li>Flask app object</li>
 </ol>
+<p>This has been used in other notebooks, and allows for a database to creates without having seperate api and python files. Like in our flask for our CPT, we needed to have one file to create an API and the other to create the SQL database.</p>
+<ol>
+<li>SQLAlchemy object</li>
+</ol>
+<p>Allows for communication between python and databased, which is needed for CRUD. We also used this in our CPT when we iterated through databases, and displayed (read) from frontend as well.</p>
 
 </div>
 </div>
@@ -250,12 +250,10 @@ window.onload = wrap_img;
 </blockquote>
 <ul>
 <li>Comment on these items in the class</li>
-<li>class User purpose</li>
-<li>db.Model inheritance</li>
+<li>class User purpose:defines the object that we will be using CRUD operations on - db.Model inheritance: we are able to organize our objects into a database, and display them in our sqlite.db folder</li>
 <li>
-<em>init</em> method</li>
-<li>@property, @<column>.setter&lt;/li&gt;
-<li>additional methods</li>
+<em>init</em> method: allows class to initialize object's attributes</li>
+<li>@property: creates and returns object, @<column>.setter: sets column for sqlite.db table- additional methods: create (creates new object(reads existing database), update(changes object in existing database), delete methods(removes object from database)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/div&gt;
