@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      16 min read
     
 </span></p>
 
@@ -780,18 +780,204 @@ Cipher Text is : Uijt jt dppm dpef
 <li><b>Give 3 Examples of games that can be made from 2D arrays</b>: 2048, Crossword, Sudoku</li>
 </ul>
 <h2 id="List-and-Dictionaries-0.2-(can-get-up-to-0.23)">List and Dictionaries 0.2 (can get up to 0.23)<a class="anchor-link" href="#List-and-Dictionaries-0.2-(can-get-up-to-0.23)"> </a></h2><ul>
-<li><b>Explain the differences between Lists and Dictionaries</b></li>
-<li><b>Make a code block that manipulates either a list or a dictionary&lt;/li&gt;
-<li>example of using iteration in cpt </li>
-&lt;/ul&gt;
+<li><b>Explain the differences between Lists and Dictionaries</b>: Lists is a collection of items that can indexed in 1 dimensional. You can put in categorical or numerical data such as strings or integers. Dictionaries also save information but in a structure of key value pairs. There can only be one key but multiple values can be attributed to that key through a list. </li>
+<li><b>Make a code block that manipulates either a list or a dictionary</b></li>
+</ul>
 
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
- 
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-</b></li></ul></div></div></div></div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">i</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><b>Example of using iteration in CPT</b></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>diagnosis_database is a dictionary that holds information about 21 different sicknesses. The key is the sickness, and the values are the symptoms associated with it.</p>
+<p>My dictionary manages complexity because it effectively saves the data in a way that directly matches a sickness to its list of symptoms. In this way, my program is able to iterate through each key's values (symptoms) and match them with the user's symptoms to find the key(sickness) that the user most likely is experiencing. If I did not use a dictionary, I would have to spend an unreasonable about of time creating variables for each sickness which would not be favorable if I wanted to expand my database to hold information about the million other types of diseases possible.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span> 
+    <span class="c1"># User input as list of strings </span>
+    <span class="n">user_symptoms_string</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Feeling under the weather? Enter your symptoms here: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">)]</span>
+
+    <span class="c1"># Diseases database</span>
+    <span class="n">diagnosis_database</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;acute bronchitis&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cough&#39;</span><span class="p">,</span> <span class="s1">&#39;Mucus&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;allergy&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Runny nose&#39;</span><span class="p">,</span> <span class="s1">&#39;Sneezing&#39;</span><span class="p">,</span> <span class="s1">&#39;Itchy Eyes&#39;</span><span class="p">,</span> <span class="s1">&#39;Watery Eyes&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;amebiasis&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fever&#39;</span><span class="p">,</span> <span class="s1">&#39;Nausea&#39;</span><span class="p">,</span> <span class="s1">&#39;Diarrhea&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;anthrax&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fever&#39;</span><span class="p">,</span> <span class="s1">&#39;Cough&#39;</span><span class="p">,</span> <span class="s1">&#39;Nausea&#39;</span><span class="p">,</span> <span class="s1">&#39;Headache&#39;</span><span class="p">,</span> <span class="s1">&#39;Sweating&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;anxiety&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Increased heart rate&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyperventilation&#39;</span><span class="p">,</span> <span class="s1">&#39;Sweating&#39;</span><span class="p">,</span> <span class="s1">&#39;Trembling&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;brain cancer&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Headache&#39;</span><span class="p">,</span> <span class="s1">&#39;Blurred vision&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;chlamydia&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Bleeding&#39;</span><span class="p">,</span> <span class="s1">&#39;Discharge&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Colorado Tick Fever(CTF)&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fever&#39;</span><span class="p">,</span> <span class="s1">&#39;Sore Throat&#39;</span><span class="p">,</span> <span class="s1">&#39;Vomiting&#39;</span><span class="p">,</span> <span class="s1">&#39;Rash&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;COVID-19&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fever&#39;</span><span class="p">,</span> <span class="s1">&#39;Sore throat&#39;</span><span class="p">,</span> <span class="s1">&#39;Runny nose&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;depression&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fatigue&#39;</span><span class="p">,</span> <span class="s1">&#39;Imsomnia&#39;</span><span class="p">,</span> <span class="s1">&#39;Agitation&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;diarrhea&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fever&#39;</span><span class="p">,</span> <span class="s1">&#39;Cramps&#39;</span><span class="p">,</span> <span class="s1">&#39;Bloating&#39;</span><span class="p">,</span> <span class="s1">&#39;Nausea&#39;</span><span class="p">,</span> <span class="s1">&#39;Vomiting&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;ear infection&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fever&#39;</span><span class="p">,</span> <span class="s1">&#39;Ear Pain&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;endometriosis&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Stomache ache&#39;</span><span class="p">,</span> <span class="s1">&#39;Bleeding&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;fibromyalgia&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fatigue&#39;</span><span class="p">,</span> <span class="s1">&#39;Depression&#39;</span><span class="p">,</span> <span class="s1">&#39;Anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;Insomnia&#39;</span><span class="p">,</span> <span class="s1">&#39;Headache&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;flu&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fever&#39;</span><span class="p">,</span> <span class="s1">&#39;Cough&#39;</span><span class="p">,</span> <span class="s1">&#39;Runny nose&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;lupus&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fatigue&#39;</span><span class="p">,</span> <span class="s1">&#39;Fever&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;lyme disease&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fever&#39;</span><span class="p">,</span> <span class="s1">&#39;Fatigue&#39;</span><span class="p">,</span> <span class="s1">&#39;Headache&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;mononucleosis&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fatigue&#39;</span><span class="p">,</span> <span class="s1">&#39;Fever&#39;</span><span class="p">,</span> <span class="s1">&#39;Sore Throat&#39;</span><span class="p">,</span> <span class="s1">&#39;Headache&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;pink eye&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Runny nose&#39;</span><span class="p">,</span> <span class="s1">&#39;Blurred vision&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;pneumonia&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cough&#39;</span><span class="p">,</span> <span class="s1">&#39;Fatigue&#39;</span><span class="p">,</span> <span class="s1">&#39;Fever&#39;</span><span class="p">,</span> <span class="s1">&#39;Nausea&#39;</span><span class="p">,</span> <span class="s1">&#39;Vomiting&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;schizophrenia&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;Paranoia&#39;</span><span class="p">,</span> <span class="s1">&#39;Hallucination&#39;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="c1"># Dictionary that includes treatment advice</span>
+    <span class="n">treatment_database</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;acute bronchitis&quot;</span><span class="p">:</span> <span class="s2">&quot;get plenty of rest! Drink fluids but avoid caffeine and alcohol. Bring a humidifier into your house. If the symptoms are too painful pain relievers and fever reducers, such as acetaminophen (Tylenol).&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;allergy&quot;</span><span class="p">:</span> <span class="s2">&quot;go to the doctor, try saline nasal irrigation, use an air filter indoors&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;amebiasis&quot;</span><span class="p">:</span> <span class="s2">&quot;take a definitive diagnosis of ambiasis by stool examination to identify the parasite. The standard treatment for ambiasis includes a course of antibiotics such as metronidazole or tinidazole, which are used to kill the parasite. It is important to consult a healthcare professional for diagnosis and treatment as the infection can lead to serious complications if left untreated.</span><span class="se">\n\n</span><span class="s2">Amebiasis can also cause dehydration and malnutrition due to diarrhea and vomiting. It is important to maintain hydration and provide adequate nutrition to help the body fight the infection! </span><span class="se">\n\n</span><span class="s2">Of course, don&#39;t forget to get lots of rest! Stay safe and we wish you good health!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;anxiety&quot;</span><span class="p">:</span> <span class="s2">&quot;try arranging a meeting with a therapist, visit the doctor for Anti-anxiety medications, listen to calming music, take leisurely walks outside&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;brain cancer&quot;</span><span class="p">:</span> <span class="s2">&quot;visit the doctor right away&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;chlamydia&quot;</span><span class="p">:</span> <span class="s2">&quot;visit the doctor to see what medication you need&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Colorado Tick Fever(CTF)&quot;</span><span class="p">:</span> <span class="s2">&quot;take over-the-counter pain relievers like acetaminophen and ibuprofen to help reduce fever, headache, and muscle pain. </span><span class="se">\n\n</span><span class="s2">Avoid taking aspirin or aspirin-contained products as they can increase the risk of bleeding in viral infections like CTF</span><span class="se">\n\n</span><span class="s2">Remember to stay hydrated to avoid fever dehydration and get enough rest!</span><span class="se">\n\n</span><span class="s2">In the end of the day, there is no specific treatment for CTF, your best bet is to learn how to prevent future encounters. Avoid walking in high-risk areas, wear protective clothing, and use insect repellents containing DEET</span><span class="se">\n\n</span><span class="s2">Stay safe and we wish you good health!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;COVID-19&quot;</span><span class="p">:</span> <span class="s2">&quot;go to bed early, drink lots of warm water, Take advil in moderation if you have muscle pain&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;depression&quot;</span><span class="p">:</span> <span class="s2">&quot;visit a doctor for medication, Try arranging a meeting with a therapist, listen to music, take walks outside&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;diarrhea&quot;</span><span class="p">:</span> <span class="s2">&quot;drink plenty of liquids, including water, broths and juices. Avoid caffeine and alcohol. Add semisolid and low-fiber foods gradually as your bowel movements return to normal. Try soda crackers, toast, eggs, rice or chicken.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ear infection&quot;</span><span class="p">:</span> <span class="s2">&quot;take antibiotics so that the infection doesn&#39;t spread to other parts of the body&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;endometriosis&quot;</span><span class="p">:</span> <span class="s2">&quot;effective treatments such as hormones and excision surgery can help, staying hydrated and putting a heating pad in the uterus area&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fibromyalgia&quot;</span><span class="p">:</span> <span class="s2">&quot;try out some of these improving quality of life treatments!</span><span class="se">\n\n</span><span class="s2">1. Medications can help manage the pain such as pain relievers, antidepressants, and anticonvulsants.</span><span class="se">\n\n</span><span class="s2">2. Get involved with physical therapy to improve muscle strength, flexibility, range of motion, and reduce pain and stiffness</span><span class="se">\n\n</span><span class="s2">3. Exercise! Yoga, walking, swimming, and cycling are all great options!</span><span class="se">\n\n</span><span class="s2">4. Be mindful of your sleep schedule. Good sleep hygiene practices like avoiding caffeine and electronics before bed would be helpful</span><span class="se">\n\n</span><span class="s2">It is important to work with a healthcare providers to dvelop an individualized health plan for fibromyalgia.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;flu&quot;</span><span class="p">:</span> <span class="s2">&quot;get plenty of rest, drink lots of water, and if you feel pain, take pain relievers&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;lupus&quot;</span><span class="p">:</span> <span class="s2">&quot;take care of your skin by wearing plenty of sun block and keeping skin safe by wearing sun protective clothes&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;lyme disease&quot;</span><span class="p">:</span> <span class="s2">&quot;take oral and Intravenous antibiotics&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;mononucleosis&quot;</span><span class="p">:</span> <span class="s2">&quot;get plenty of rest and take antiflammatory drugs&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pink eye&quot;</span><span class="p">:</span><span class="s2">&quot;use artificial tears, clean your eyelids with a wet cloth, and apply cold or warm compresses several times daily. &quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pneumonia&quot;</span><span class="p">:</span> <span class="s2">&quot;mild pneumonia can usually be treated at home with rest, antibiotics (if it&#39;s likely be caused by a bacterial infection) and by drinking plenty of fluids. More severe cases may need hospital treatment.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;schizophrenia&quot;</span><span class="p">:</span> <span class="s2">&quot;treatment with medications and psychosocial therapy can help manage the condition. In some cases, hospitalization may be needed. A psychiatrist experienced in treating schizophrenia usually guides treatment.&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Pass user symptoms as a parameter</span>
+    <span class="k">def</span> <span class="nf">get_diagnosis</span><span class="p">(</span><span class="n">user_symptoms_string</span><span class="p">):</span>
+        
+        <span class="c1"># Initialize match score array</span>
+        <span class="n">match_result_array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">diagnosis_database</span><span class="p">)</span>
+
+        <span class="c1"># Initialize variables</span>
+        <span class="n">match_disease_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">max_match_result</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">max_match_result_disease</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">max_match_result_treatment</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">max_match_result_report</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="c1"># Nested for loop to match user&#39;s symptoms to symptoms in database that correspond to a certain sickness</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">diagnosis_database</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">symptom</span> <span class="ow">in</span> <span class="n">user_symptoms_string</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+                    <span class="c1"># If they do match, +1 to array keeping track of how many matches for each sickness</span>
+                    <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">symptom</span><span class="p">:</span>
+                        <span class="n">match_result_array</span><span class="p">[</span><span class="n">match_disease_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">match_result_array</span><span class="p">[</span><span class="n">match_disease_index</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+                        <span class="k">break</span>
+            <span class="c1"># Finding sickness with max number of matches with user symptoms </span>
+            <span class="k">if</span> <span class="n">match_result_array</span><span class="p">[</span><span class="n">match_disease_index</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_match_result</span><span class="p">:</span>
+                <span class="n">max_match_result</span> <span class="o">=</span> <span class="n">match_result_array</span><span class="p">[</span><span class="n">match_disease_index</span><span class="p">]</span>
+                <span class="n">max_match_result_disease</span> <span class="o">=</span> <span class="n">key</span>
+            <span class="n">match_disease_index</span> <span class="o">=</span> <span class="n">match_disease_index</span> <span class="o">+</span> <span class="mi">1</span>
+        
+        <span class="c1"># Match sickness with treatment advice </span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">treatment_database</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> 
+            <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="n">max_match_result_disease</span><span class="p">:</span>
+                <span class="n">max_match_result_treatment</span> <span class="o">=</span> <span class="n">value</span> 
+                <span class="k">break</span> 
+
+        <span class="c1"># Combine printed information into one variable</span>
+        <span class="n">max_match_result_report</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Based on your current symptoms, your mostly likely sickness is &quot;</span> <span class="o">+</span> <span class="n">max_match_result_disease</span> <span class="o">+</span> <span class="s2">&quot;.</span><span class="se">\n\n</span><span class="s2">We advise you to &quot;</span> <span class="o">+</span> <span class="n">max_match_result_treatment</span>
+        <span class="k">return</span> <span class="n">max_match_result_report</span>
+
+    <span class="n">report</span> <span class="o">=</span> <span class="n">get_diagnosis</span><span class="p">(</span><span class="n">user_symptoms_string</span><span class="p">)</span>
+    <span class="c1"># Print diagnosis and treatment advice</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
+
+    <span class="c1"># Ask user if want to run program again</span>
+    <span class="n">restart</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Run again? (y/n) &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">restart</span> <span class="o">==</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">restart</span> <span class="o">==</span> <span class="s2">&quot;n&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Goodbye and stay safe!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Please type either y for yes or n for no&quot;</span><span class="p">)</span>
+<span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Based on your current symptoms, your mostly likely sickness is acute bronchitis.
+
+We advise you to get plenty of rest! Drink fluids but avoid caffeine and alcohol. Bring a humidifier into your house. If the symptoms are too painful pain relievers and fever reducers, such as acetaminophen (Tylenol).
+
+Goodbye and stay safe!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
 
 
   </div><a class="u-url" href="/emma_blog/2023/04/21/EOYPLAYGROUND.html" hidden></a>
