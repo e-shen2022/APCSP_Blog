@@ -459,11 +459,7 @@ Hello, this is my cool site. Check out my products:
 <p>"Content-Type" header - The purpose of this header is to provide information to the server about the type of data that is being sent in the body of the HTTP request or response.</p>
 <p>Ex. if a client sends a POST request to a server with a JSON payload in the body, the Content-Type header would be set to "application/json". This tells the server that the body of the request contains JSON data and helps the server understand how to parse and process the data. Similarly, when a server sends a response back to the client, it includes a Content-Type header that specifies the type of data being sent. This is important because the client needs to know how to interpret the data.</p>
 <p><b>2. Write a line in a sample NGINX configuration that will add that specific header to the `/information` location</b></p>
-<div class="highlight"><pre><span></span><span class="k">location</span> <span class="s">/information</span> <span class="p">{</span>
-  <span class="kn">add_header</span> <span class="s">X-Custom-Header</span> <span class="s">my-header-value</span><span class="p">;</span>
-  <span class="c1">#other configuration directives</span>
-<span class="p">}</span>
-</pre></div>
+<p>"add_header Date $date_gmt;"</p>
 <p><b>3. Explain the purpose of the load balancing performed by NGINX</b></p>
 <p>The purpose of load balancing performed by NGINX is to distribute incoming traffic across multiple servers or instances. This helps make websites faster and more reliable by dividing incoming traffic across multiple servers or computers, preventing one server from getting too much traffic and slowing down the website.</p>
 <p><b>4. Modify the following code block to obtain the value of the secret header on `/products` of the AWS site</b> ✅</p>
@@ -478,11 +474,15 @@ Hello, this is my cool site. Check out my products:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">aws</span> <span class="o">=</span> <span class="s2">"3.130.255.192"</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"http://"</span> <span class="o">+</span> <span class="n">aws</span><span class="o">+</span> <span class="s2">"/products"</span><span class="p">)</span>
+<span class="n">aws</span> <span class="o">=</span> <span class="s2">"3.130.255.192"</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"The secret header is:"</span><span class="p">,</span> <span class="s2">"'X-Cooler-Header': 'This is my secret header!'"</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"http://"</span> <span class="o">+</span> <span class="n">aws</span> <span class="o">+</span> <span class="s2">"/products"</span><span class="p">)</span>
+
+<span class="n">secret_header</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'X-Cooler-Header'</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The secret header is:"</span><span class="p">,</span> <span class="n">secret_header</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -495,7 +495,7 @@ Hello, this is my cool site. Check out my products:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The secret header is: 'X-Cooler-Header': 'This is my secret header!'
+<pre>The secret header is: This is my secret header!
 </pre>
 </div>
 </div>
