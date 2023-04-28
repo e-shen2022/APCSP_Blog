@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      12 min read
     
 </span></p>
 
@@ -815,10 +815,121 @@ d
 <li>Machine learning algorithms often involve iterative processes to train models and improve their accuracy. For example, in a gradient descent algorithm, you might iterate over a set of training data to update the model's parameters and minimize the loss function.</li>
 </ul>
 <h2 id="Popcorn-hack-(0.3)">Popcorn hack (0.3)<a class="anchor-link" href="#Popcorn-hack-(0.3)"> </a></h2><ul>
-<li>Make a list related to your CPT project</li>
-<li>Make a while loop that will print each term in the list</li>
-<li>Make a for loop that will print each term in the list</li>
+<li>Make a list related to your CPT project ✅</li>
+<li>Make a for loop that will print each term in the list ✅</li>
+<li>Make a while loop that will print each term in the list ✅</li>
+<li>Explain mechanics behind the loop works ✅</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><b>Explanation for code below:</b></p>
+<ul>
+<li>I first created a list called fibromyalgia_symps that stores the sicknesses fibromyalgia's symptoms</li>
+<li>The for loop iterates through each item in that list and prints it until all the symptoms have been looped through</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fibromyalgia_symps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fatigue&#39;</span><span class="p">,</span> <span class="s1">&#39;Depression&#39;</span><span class="p">,</span> <span class="s1">&#39;Anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;Insomnia&#39;</span><span class="p">,</span> <span class="s1">&#39;Headache&#39;</span><span class="p">]</span>
+
+<span class="c1">#For loop </span>
+<span class="k">for</span> <span class="n">symptom</span> <span class="ow">in</span> <span class="n">fibromyalgia_symps</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">symptom</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Fatigue
+Depression
+Anxiety
+Insomnia
+Headache
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><b>Explanation for code below:</b></p>
+<ul>
+<li>Using the same list from above</li>
+<li>Initialize index to 0</li>
+<li>While loop keeps iterating through each term in the list while the index is less than the total length of the list</li>
+<li>Then it prints the term at that index, which is the symptom, and adds 1 to the index to iterate to the next item in the list </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fibromyalgia_symps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fatigue&#39;</span><span class="p">,</span> <span class="s1">&#39;Depression&#39;</span><span class="p">,</span> <span class="s1">&#39;Anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;Insomnia&#39;</span><span class="p">,</span> <span class="s1">&#39;Headache&#39;</span><span class="p">]</span>
+
+<span class="c1">#While loop </span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">fibromyalgia_symps</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fibromyalgia_symps</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Fatigue
+Depression
+Anxiety
+Insomnia
+Headache
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Simulation mechanics</p>
 <ul>
 <li>In Python, pop() is a method that is used to remove and return an element from a list. The syntax for using pop() is as follows:</li>
@@ -924,12 +1035,22 @@ d
 
 <pre><code>students = ['advay', 'amay', 'rohin', 'alex', 'ethan']</code></pre>
 <hr />
-<h1 id="Check-In:">Check In:<a class="anchor-link" href="#Check-In:"> </a></h1><ul>
-<li>Of the above code segments, which is a list and which is a dictionary?</li>
-<li>What is a dictionary and how is it used?</li>
-<li>What is a 2D Array?</li>
-<li>How are 2D Arrays different from 1D Arrays or Lists and what can they be used for?</li>
+<h1 id="Check-In:-&#9989;">Check In: &#9989;<a class="anchor-link" href="#Check-In:-&#9989;"> </a></h1><ul>
+<li><b>Of the above code segments, which is a list and which is a dictionary?</b></li>
 </ul>
+<p>The first code segment is a dictionary, the 2nd is a list</p>
+<ul>
+<li><b>What is a dictionary and how is it used?</b></li>
+</ul>
+<p>A dictionary is a type of 2D array that matches key-value pairs. It allows us to associate a value to a unique key, and then to quickly access this value.</p>
+<ul>
+<li><b>What is a 2D Array?</b></li>
+</ul>
+<p>Arrays where the data element's position is referred to by two indices. The name specifies two dimensions, like row and column, i and j</p>
+<ul>
+<li><b>How are 2D Arrays different from 1D Arrays or Lists and what can they be used for?</b></li>
+</ul>
+<p>1D arrays are just one row of values, while 2D arrays contain a grid of values that has several rows/columns. @d  are especially useful when the data is naturally organized in rows and columns like in a spreadsheet, bingo, battleship, theater seats, classroom seats, or a picture</p>
 <h2 id="Manipulating-Dictionaries">Manipulating Dictionaries<a class="anchor-link" href="#Manipulating-Dictionaries"> </a></h2>
 </div>
 </div>
@@ -957,6 +1078,7 @@ d
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your grocery list:&quot;</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">item</span><span class="p">,</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">grocery_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">total_cost</span> <span class="o">=</span> <span class="n">total_cost</span> <span class="o">+</span> <span class="n">price</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- </span><span class="si">{}</span><span class="s2">: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">price</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total cost: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total_cost</span><span class="p">))</span>
     
@@ -989,6 +1111,37 @@ d
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Your grocery list:
+- Apple: $1.0
+- Orange: $1.0
+- Chocolate: $1.0
+- M&amp;M: $1.0
+Total cost: $4.0
+Your grocery list:
+- Apple: $1.0
+- Orange: $1.0
+- Chocolate: $1.0
+- M&amp;M: $1.0
+Total cost: $8.0
+Final grocery list:
+- Apple: $1.0
+- Orange: $1.0
+- Chocolate: $1.0
+- M&amp;M: $1.0
+Total cost: $8.0
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
