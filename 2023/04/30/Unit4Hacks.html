@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      9 min read
     
 </span></p>
 
@@ -152,7 +152,7 @@ Processor	AMD Ryzen 5 5625U with Radeon Graphics, 2301 Mhz, 6 Core(s), 12 Logica
 <h3 id="the-internet">
 <a class="anchor" href="#the-internet" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Internet</h3>
 <blockquote>
-  <p>Watch/review College Board Daily Video for 4.1.1</p>
+  <p>4.1.1 Notes</p>
 </blockquote>
 
 <ul>
@@ -170,24 +170,25 @@ Processor	AMD Ryzen 5 5625U with Radeon Graphics, 2301 Mhz, 6 Core(s), 12 Logica
   </li>
   <li>Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use <code class="language-plaintext highlighter-rouge">traceroute</code> and <code class="language-plaintext highlighter-rouge">ping</code> commands from Linux Terminal.
     <ul>
-      <li>Path</li>
-      <li>Route</li>
-      <li>Computer System</li>
-      <li>Computer Device</li>
-      <li>Bandwidth</li>
-      <li>Computer Network</li>
+      <li>A <b>Path</b>: Sequence of directly connected computing devices that begins at sender and ends at receiver</li>
+      <li>E <b>Route</b>: Process of finding a path from sender to receiver</li>
+      <li>B <b>Computer System</b>: A group of computing devices working together for a joint purpose</li>
+      <li>C <b>Computer Device</b>: Physical artifact that can run a program. Ex. Computers, tablets, servers, routers, etc.</li>
+      <li>D <b>Bandwidth</b>: Max amount of data that can be sent in a fixed amount of time on a computer network</li>
+      <li>F <b>Computer Network</b>: Type of computing system. A group of interconnected computers that can send and recieve data to each other</li>
+      <li>
+<mark>Extra to know</mark>: Computers talk through <b>packet Switching</b>: The message (file) is broken up into packets and send in any order. The packets are reassembled by the recipient’s device. A <b>packet</b> is a small amount of data sent through network, contains source and destination info
+<img src="/emma_blog/images/pathandrouting.png" alt="Path and Routing">
+</li>
     </ul>
   </li>
 </ul>
 
 <blockquote>
-  <p>Watch/review College Board Daily Video 4.1.2</p>
+  <p>4.1.2 Notes</p>
 </blockquote>
 
 <ul>
-  <li>
-    <p>Complete True of False Questions</p>
-  </li>
   <li>Essential Knowledge
     <ul>
       <li>The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.</li>
@@ -206,12 +207,39 @@ Processor	AMD Ryzen 5 5625U with Radeon Graphics, 2301 Mhz, 6 Core(s), 12 Logica
       <li>The world wide web uses the internet</li>
     </ul>
   </li>
-  <li>Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highligh vocabulary by illustration. The below illustration have some ideas</li>
 </ul>
 
-<p><img src="/emma_blog/images/fullstack.png" alt="Full Stack"></p>
+<p><mark>Extra Notes</mark></p>
 
+<p><img src="/emma_blog/images/model.png" alt="Model"></p>
 <ul>
+  <li>
+<b>Network Access</b>: Hardware (ex. Internet cable, wifi cable)</li>
+  <li>
+<b>Internet</b>: Packers, Sender and receiver IP, metadata for routing information</li>
+  <li>
+<b>Transport</b>: TCP (error checking and error recovery very slow, 3-way handshake to verify delivery) &amp; UDP (error checking, discards erroneous packets)</li>
+  <li>
+<b>Application</b>: web services, domain name service, http/https(http w/ security)</li>
+  <li>
+    <p><b>World-Wide Web</b>: linked data pages, NOT Internet</p>
+  </li>
+  <li>
+    <p>Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highligh vocabulary by illustration. The below illustration have some ideas
+<img src="/emma_blog/images/fullstack.png" alt="Full Stack"></p>
+  </li>
+  <li>
+<b>Complete True of False Questions</b>
+    <ol>
+      <li>T</li>
+      <li>F</li>
+      <li>F</li>
+      <li>T</li>
+      <li>F</li>
+      <li>F</li>
+      <li>T</li>
+    </ol>
+  </li>
   <li>Often we draw pictures of machines communicating over the Internet with arrows.  However, the real communication goes through protocol layers and the machine and then is trasported of the network.   For College Board and future Computer Knowledge you should become familiar with the following …</li>
 </ul>
 
@@ -241,10 +269,18 @@ Processor	AMD Ryzen 5 5625U with Radeon Graphics, 2301 Mhz, 6 Core(s), 12 Logica
 <a class="anchor" href="#fault-tolerance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fault Tolerance</h3>
 <blockquote>
   <p>Watch both Daily videos for 4.2</p>
+  <ul>
+    <li>
+<b>NOT fault tolerant</b>: Doesn’t use many resources, Failure in one network = fatal</li>
+    <li>
+<b>Fault tolerant</b>: Redundant and uses more resources. But even if one path goes down, a device can communicate with all other devices. Makes network stronger!</li>
+  </ul>
 </blockquote>
 
 <ul>
-  <li>Complete the network activity, summarize your understanding of fault tolerance.</li>
+  <li>
+<b>Complete the network activity, summarize your understanding of fault tolerance.</b>
+Fault tolerance is a network’s ability to withstand disconnections. Networks use many interconnected nodes to guarantee that no one or two interrupted connections can take down a system. You can tell if a network is fault tolerant by checking that even if one path goes down, every device can communicate with all other devices.</li>
 </ul>
 
 <h3 id="parallel-and-distributed-computing">
@@ -252,6 +288,8 @@ Processor	AMD Ryzen 5 5625U with Radeon Graphics, 2301 Mhz, 6 Core(s), 12 Logica
 <blockquote>
   <p>Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks…</p>
 </blockquote>
+
+<p><mark>Notes</mark></p>
 
 <ul>
   <li>
