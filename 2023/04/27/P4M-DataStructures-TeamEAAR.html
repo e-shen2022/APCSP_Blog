@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      14 min read
+      16 min read
     
 </span></p>
 
@@ -1192,7 +1192,10 @@ This is the list after clearing all scores []
     <span class="n">key</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the sickness (or type &#39;done&#39; to finish): &quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;done&#39;</span><span class="p">:</span>
         <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You entered the sickness: </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">value</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the symptoms attributed to that sickness: &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You ented the symptoms:  </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">diagnosis_database</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
 
 <span class="c1"># display database </span>
@@ -1209,7 +1212,9 @@ This is the list after clearing all scores []
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;acute bronchitis&#39;: [&#39;Cough&#39;, &#39;Mucus&#39;], &#39;allergy&#39;: [&#39;Runny nose&#39;, &#39;Sneezing&#39;, &#39;Itchy Eyes&#39;, &#39;Watery Eyes&#39;], &#39;amebiasis&#39;: [&#39;Fever&#39;, &#39;Nausea&#39;, &#39;Diarrhea&#39;], &#39;anxiety&#39;: [&#39;Increased heart rate&#39;, &#39;Hyperventilation&#39;, &#39;Sweating&#39;, &#39;Trembling&#39;], &#39;brain cancer&#39;: [&#39;Headache&#39;, &#39;Blurred vision&#39;], &#39;chlamydia&#39;: [&#39;Bleeding&#39;, &#39;Discharge&#39;], &#39;Colorado Tick Fever(CTF)&#39;: [&#39;Fever&#39;, &#39;Sore Throat&#39;, &#39;Vomiting&#39;, &#39;Rash&#39;], &#39;COVID-19&#39;: [&#39;Fever&#39;, &#39;Sore throat&#39;, &#39;Runny nose&#39;], &#39;depression&#39;: [&#39;Fatigue&#39;, &#39;Imsomnia&#39;, &#39;Agitation&#39;], &#39;diarrhea&#39;: [&#39;Fever&#39;, &#39;Cramps&#39;, &#39;Bloating&#39;, &#39;Nausea&#39;, &#39;Vomiting&#39;], &#39;ear infection&#39;: [&#39;Fever&#39;, &#39;Ear Pain&#39;], &#39;endometriosis&#39;: [&#39;Stomache ache&#39;, &#39;Bleeding&#39;], &#39;fibromyalgia&#39;: [&#39;Fatigue&#39;, &#39;Depression&#39;, &#39;Anxiety&#39;, &#39;Insomnia&#39;, &#39;Headache&#39;], &#39;flu&#39;: [&#39;Fever&#39;, &#39;Cough&#39;, &#39;Runny nose&#39;], &#39;lupus&#39;: [&#39;Fatigue&#39;, &#39;Fever&#39;], &#39;lyme disease&#39;: [&#39;Fever&#39;, &#39;Fatigue&#39;, &#39;Headache&#39;], &#39;mononucleosis&#39;: [&#39;Fatigue&#39;, &#39;Fever&#39;, &#39;Sore Throat&#39;, &#39;Headache&#39;], &#39;pink eye&#39;: [&#39;Runny nose&#39;, &#39;Blurred vision&#39;], &#39;pneumonia&#39;: [&#39;Cough&#39;, &#39;Fatigue&#39;, &#39;Fever&#39;, &#39;Nausea&#39;, &#39;Vomiting&#39;], &#39;schizophrenia&#39;: [&#39;Anxiety&#39;, &#39;Paranoia&#39;, &#39;Hallucination&#39;], &#39;ofuwhef&#39;: &#39;aef,wefwe,ewf&#39;}
+<pre>You entered the sickness: Stone Man&#39;s Disease
+You ented the symptoms:  Low-grade fever, inflammation, join paint
+{&#39;acute bronchitis&#39;: [&#39;Cough&#39;, &#39;Mucus&#39;], &#39;allergy&#39;: [&#39;Runny nose&#39;, &#39;Sneezing&#39;, &#39;Itchy Eyes&#39;, &#39;Watery Eyes&#39;], &#39;amebiasis&#39;: [&#39;Fever&#39;, &#39;Nausea&#39;, &#39;Diarrhea&#39;], &#39;anxiety&#39;: [&#39;Increased heart rate&#39;, &#39;Hyperventilation&#39;, &#39;Sweating&#39;, &#39;Trembling&#39;], &#39;brain cancer&#39;: [&#39;Headache&#39;, &#39;Blurred vision&#39;], &#39;chlamydia&#39;: [&#39;Bleeding&#39;, &#39;Discharge&#39;], &#39;Colorado Tick Fever(CTF)&#39;: [&#39;Fever&#39;, &#39;Sore Throat&#39;, &#39;Vomiting&#39;, &#39;Rash&#39;], &#39;COVID-19&#39;: [&#39;Fever&#39;, &#39;Sore throat&#39;, &#39;Runny nose&#39;], &#39;depression&#39;: [&#39;Fatigue&#39;, &#39;Imsomnia&#39;, &#39;Agitation&#39;], &#39;diarrhea&#39;: [&#39;Fever&#39;, &#39;Cramps&#39;, &#39;Bloating&#39;, &#39;Nausea&#39;, &#39;Vomiting&#39;], &#39;ear infection&#39;: [&#39;Fever&#39;, &#39;Ear Pain&#39;], &#39;endometriosis&#39;: [&#39;Stomache ache&#39;, &#39;Bleeding&#39;], &#39;fibromyalgia&#39;: [&#39;Fatigue&#39;, &#39;Depression&#39;, &#39;Anxiety&#39;, &#39;Insomnia&#39;, &#39;Headache&#39;], &#39;flu&#39;: [&#39;Fever&#39;, &#39;Cough&#39;, &#39;Runny nose&#39;], &#39;lupus&#39;: [&#39;Fatigue&#39;, &#39;Fever&#39;], &#39;lyme disease&#39;: [&#39;Fever&#39;, &#39;Fatigue&#39;, &#39;Headache&#39;], &#39;mononucleosis&#39;: [&#39;Fatigue&#39;, &#39;Fever&#39;, &#39;Sore Throat&#39;, &#39;Headache&#39;], &#39;pink eye&#39;: [&#39;Runny nose&#39;, &#39;Blurred vision&#39;], &#39;pneumonia&#39;: [&#39;Cough&#39;, &#39;Fatigue&#39;, &#39;Fever&#39;, &#39;Nausea&#39;, &#39;Vomiting&#39;], &#39;schizophrenia&#39;: [&#39;Anxiety&#39;, &#39;Paranoia&#39;, &#39;Hallucination&#39;], &#34;Stone Man&#39;s Disease&#34;: &#39;Low-grade fever, inflammation, join paint&#39;}
 </pre>
 </div>
 </div>
@@ -1238,11 +1243,11 @@ This is the list after clearing all scores []
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_rows</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the number of rows: &quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;number of rows: </span><span class="si">{</span><span class="n">num_rows</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of rows: </span><span class="si">{</span><span class="n">num_rows</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">num_cols</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the number of columns: &quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;number of columns: </span><span class="si">{</span><span class="n">num_cols</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of columns: </span><span class="si">{</span><span class="n">num_cols</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="c1"># generate the grid</span>
+<span class="c1"># Generate grod</span>
 <span class="n">grid</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_rows</span><span class="p">):</span>
     <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1250,7 +1255,7 @@ This is the list after clearing all scores []
         <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;[ ]&#39;</span><span class="p">)</span>
     <span class="n">grid</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 
-<span class="c1"># print the grid</span>
+<span class="c1"># Print grid </span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">grid</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
 </pre></div>
@@ -1265,13 +1270,21 @@ This is the list after clearing all scores []
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>number of rows: 5
-number of columns: 5
-[ ] [ ] [ ] [ ] [ ]
-[ ] [ ] [ ] [ ] [ ]
-[ ] [ ] [ ] [ ] [ ]
-[ ] [ ] [ ] [ ] [ ]
-[ ] [ ] [ ] [ ] [ ]
+<pre>Number of rows: 13
+Number of columns: 13
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
 </pre>
 </div>
 </div>
