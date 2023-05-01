@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -290,14 +290,36 @@ Fault tolerance is a network’s ability to withstand disconnections. Networks u
 </blockquote>
 
 <p><mark>Notes</mark></p>
-
 <ul>
+  <li>Computer tasks: balance tasks so all CPUs used evenly and fully
+    <ul>
+      <li>System tasks: scheduling what to do next, managing hardware, working with network</li>
+      <li>User tasks: executing programs that the user has selected</li>
+    </ul>
+  </li>
+  <li>
+<b>Sequential Computing</b>: Tasks are done one after another</li>
+  <li>
+<b>Parallel Computing</b>: program broke into multiple smaller sequential computing programs, some at the same time!
+    <ul>
+      <li>Normally on same computer</li>
+      <li>Hardware driven, faster operations, data driven,</li>
+    </ul>
+  </li>
+  <li>Compare efficiency by execution time</li>
+  <li>Speed up time: time to complete task sequentially / time to complete task in parallel</li>
+  <li>
+<b>Distributed Computing</b>: sending of tasks from one computer to another, mix of sequential and parallel
+    <ul>
+      <li>Solve problems that can’t be done with one computer bc of processing time/storage Ex. google web search</li>
+      <li>Needs a network</li>
+    </ul>
+  </li>
   <li>
     <p>What is naturally Distributed in Frontend/Backend archeticture?</p>
   </li>
-  <li>
-    <p>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a></p>
-  </li>
+  <li>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a>
+</li>
 </ul>
 
 <blockquote>
