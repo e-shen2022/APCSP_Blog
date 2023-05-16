@@ -137,33 +137,11 @@ window.onload = wrap_img;
 <h2>Project Overview</h2><ol>
 <li>Project Purpose/Description</li>
 <li>Tool/Environment Setup </li>
-<li>Theory Exploration (Neural Networks)</li>
+<li>Theory Exploration (ML, NN, CNNs)</li>
 <li>Creating and Compiling the Model</li>
 <li>Training </li>
 <li>Implement GUI </li>
 </ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3>Vocab to look back on</h3><ul>
-<li><p>Machine Learning</p>
-</li>
-<li><p>Neural Networks</p>
-<ul>
-<li>Deep Neural Networks </li>
-<li>Convolutional Neural Networks <ul>
-<li>Sequential</li>
-<li>Functional </li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Tensorflow</p>
-</li>
-</ul>
 
 </div>
 </div>
@@ -243,15 +221,13 @@ pip install keras</code></pre>
 <li><p>In the picture above is an example of a <mark>Deep Neural Network</mark>, which is just a neural network with more than 2 hidden layers. These hidden layers are where most of the computations are made to identify patterns in the data and make predictions. The more # of hidden layers, the more the neural network is able to learn and recognize more COMPLEX patterns in the input data.</p>
 </li>
 </ul>
-<h3>Why are we using a Convolutional Neural Network (CNN)? </h3><p>A <mark>Convolutional Neural Network</mark> is a type of neural network that specializes in image processing and analysis.</p>
-<p>It is great for</p>
+<h3>Why are we using a Deep Convolutional Neural Network (CNN)? </h3><p><img src="https://i.imgur.com/3RO81Ua.png" alt="" /></p>
 <ul>
-<li>Why use a Neural Network?<ul>
-<li>Great for classifying objects and extracting certain features from them. While training our dataset, we will create feature hierarchy/ feature layers that will find We can find features in our input data </li>
+<li>A <mark>Convolutional Neural Network</mark> is a type of neural network that is <b>IDEAL for image classification</b> because it is specifically designed to recognize patterns and features within images <ul>
+<li>Usually after the convolutional layers, there are <b>pooling layers</b> that look at small areas of the image, and then take the max/avg value in that area. This reduces the number of pixels in the image while keeping the most important info about the features for pattern recognition! </li>
 </ul>
 </li>
 </ul>
-<p><em>If you are still confused about the concept/process of neural networks, I recommend watching <a href="https://www.youtube.com/watch?v=bfmFfD2RIcg&amp;t=270s">this video</a></em></p>
 
 &lt;/div&gt;
 &lt;/div&gt;
