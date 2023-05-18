@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      8 min read
     
 </span></p>
 
@@ -138,9 +138,13 @@ window.onload = wrap_img;
 <li>Project Purpose/Description</li>
 <li>Tool/Environment Setup </li>
 <li>Theory Exploration (ML, NN, CNNs)</li>
-<li>Creating and Compiling the Model</li>
-<li>Training </li>
+<li>Train data </li>
+<li>Create Model</li>
+<li>Compile Model</li>
+<li>Train Model</li>
 <li>Implement GUI </li>
+<li>Debugging</li>
+<li>Reflection</li>
 </ol>
 
 </div>
@@ -168,19 +172,22 @@ window.onload = wrap_img;
 <li><p>Python Packages (Keras)</p>
 </li>
 </ul>
-<p><b>1. VSCode Environment</b></p>
-<p>(a) Create a new folder in File Explorer and name it <em>Project Name</em>. Make sure you know the directory path</p>
+<h3>1. VSCode Environment</h3><p>(a) Create a new folder in File Explorer and name it <em>Project Name</em>. Make sure you know the directory path</p>
 <p>(b) Open the folder in VSCODE</p>
 <p>(c) Create a new folder called "src" and two new files called "train.py" and "emoji.py".</p>
-<p>(d) Now create a subfolder under "src" called "data". Navigate to <a href="https://www.kaggle.com/datasets/msambare/fer2013">this dataset</a> on Kaggle and download it. We will be using this dataset to train our model so look around and familiarize yourself with what this data is!</p>
-<p>(e) Download and extract the data into the "data" folder. You should now be able to see two subset folders labeled "train" and "test" folders with many pictures under the "data" folder.</p>
-<p>This is all you need to set up for now!</p>
-<p><b>2. Modules to Install</b></p>
-<ul>
-<li>OpenCV </li>
-<li>Numpy </li>
-<li>Tensorflow</li>
-<li>Keras</li>
+<p>(d) Now create 2 subfolders under "src" called "data" and "emojis".</p>
+<p>(e) Navigate to <a href="https://www.kaggle.com/datasets/msambare/fer2013">this dataset</a> on Kaggle and download it. We will be using this dataset to train our model so look around and familiarize yourself with what this data is!</p>
+<p>(f) Download and extract the data into the "data" folder. You should now be able to see two subset folders labeled "train" and "test" folders with many pictures under the "data" folder.</p>
+<p>We will be filling in the emojis folder later. This is all you need to set up for now!</p>
+<h3>2. Modules to Install</h3><ul>
+<li><p><b>OpenCV</b>: Otherwie known as Open Source Computer Vision. A library that provides a set of tools/functions to process/analyze images and videos</p>
+</li>
+<li><p><b>Numpy</b>: Python library that allows us to use multi-dimensional rrays to store large datasets and use optimized mathematical functions for data analysis</p>
+</li>
+<li><p><b>Tensorflow</b>: A very useful tool for machine learning. Takes data, builds a model, trains it, and then lets us use the trained model to make predictions!</p>
+</li>
+<li><p><b>Keras</b>: A high-level neural networks API integrated into Tensorflow</p>
+</li>
 </ul>
 <p>Run these commands in terminal to install. These packages will later be used when compiling and training the model.</p>
 <blockquote><p>FOR WINDOWS</p>
@@ -188,11 +195,11 @@ window.onload = wrap_img;
 
 <pre><code>pip install opencv-python
 
-pip install numpy 
+pip install numpy==1.22
 
-pip install tensorflow==2.8.0 (version 2.2 or higher)
+pip install tensorflow==2.12.0 
 
-pip install keras</code></pre>
+pip install keras==2.12.0</code></pre>
 
 </div>
 </div>
@@ -232,6 +239,134 @@ pip install keras</code></pre>
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2><mark>#4</mark> More imports &amp; Data Preprocessing </h2><p>Navigate to the <b>train.py file</b></p>
+<h3>1. Import Packages </h3><blockquote>
+<pre><code>import numpy as np 
+from tensorflow import keras                                    
+from keras.models import Sequential, load_model                   
+from keras.layers import Dense, Dropout, Flatten
+from keras.layers import Conv2D
+from keras.optimizers import Adam
+from keras.layers import MaxPooling2D
+from keras.preprocessing.image import ImageDataGenerator</code></pre>
+</blockquote>
+<p>We will learn about what these functions do soon~</p>
+<hr />
+<p><b>Before we can even start making our model, we need to pre-process our data. We will be rescaling, applying filters, and resizing the images to be compatible for NN training</b></p>
+<h3>2. Train data </h3><h1 id="Define-the-directories-where-training/testing-data-located">Define the directories where training/testing data located<a class="anchor-link" href="#Define-the-directories-where-training/testing-data-located"> </a></h1><p>&gt;
+    train_dir = 'data/train'
+    value_dir = 'data/test'</p>
+<h1 id="Divides-image-pixel-values-by-255-to-scale-down-pixel-values-to-normalized-range-between-0-and-1-for-NN-training">Divides image pixel values by 255 to scale down pixel values to normalized range between 0 and 1 for NN training<a class="anchor-link" href="#Divides-image-pixel-values-by-255-to-scale-down-pixel-values-to-normalized-range-between-0-and-1-for-NN-training"> </a></h1>
+<pre><code>train_datagen = ImageDataGenerator(rescale=1./255)
+value_datagen = ImageDataGenerator(rescale=1./255)
+
+
+</code></pre>
+<h1 id="Loads-images-from-train_dir">Loads images from train_dir<a class="anchor-link" href="#Loads-images-from-train_dir"> </a></h1><blockquote><p>
+    train_generator = train_datagen.flow_from_directory(
+        train_dir,</p>
+</blockquote>
+<h1 id="Resize-images-to-48-x-48-pixels">Resize images to 48 x 48 pixels<a class="anchor-link" href="#Resize-images-to-48-x-48-pixels"> </a></h1><p>&gt;
+        target_size = (48, 48),</p>
+<h1 id="Number-of-images-processed-in-each-batch">Number of images processed in each batch<a class="anchor-link" href="#Number-of-images-processed-in-each-batch"> </a></h1><p>&gt;
+        batch_size = 64,</p>
+<h1 id="Convert-images-to-grayscale-(reduce-dimensionality-of-input-data-from-RGB-to-intensity)">Convert images to grayscale (reduce dimensionality of input data from RGB to intensity)<a class="anchor-link" href="#Convert-images-to-grayscale-(reduce-dimensionality-of-input-data-from-RGB-to-intensity)"> </a></h1><p>&gt;
+        color_mode = "grayscale",</p>
+<h1 id="Labels-for-images-are-categorical-values-(Ex.-Happy,-Sad,-Surprised,-etc)">Labels for images are categorical values (Ex. Happy, Sad, Surprised, etc)<a class="anchor-link" href="#Labels-for-images-are-categorical-values-(Ex.-Happy,-Sad,-Surprised,-etc)"> </a></h1><p>&gt;
+        class_mode = 'categorical'
+        )</p>
+<h1 id="Same-process-for-test-data">Same process for test data<a class="anchor-link" href="#Same-process-for-test-data"> </a></h1><blockquote><p><br />
+    value_generator = value_datagen.flow_from_directory(
+        train_dir,
+        target_size = (48, 48),
+        batch_size = 64,
+        color_mode = "grayscale",
+        class_mode = 'categorical'
+        )</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2><mark>#5</mark> Create Model </h2><p>Continue in the train.py file.</p>
+<p>We can now start building our Convolutional Neural Network layer by layer using the sequential model.</p>
+<p>In order to create an <b>accurate</b> model, we are going to implement many convolutional layers to detect complex patterns, pooling layers to downsample the data, regularization techniques to prevent overfitting, flatten layers to prepare for fully connected layers, and dense layers to prepare for classification using activation functions.</p>
+<p><hr /></p>
+<blockquote><p>emotion_model = Sequential()</p>
+</blockquote>
+<h1 id="Adding-2-convolutional-layers-that-are-responsible-for-detecting-local-patterns-in-the-input-data">Adding 2 convolutional layers that are responsible for detecting local patterns in the input data<a class="anchor-link" href="#Adding-2-convolutional-layers-that-are-responsible-for-detecting-local-patterns-in-the-input-data"> </a></h1><h1 id="1st-layer-has-32-filters-of-size-3x3-pixels-and-applies-the-ReLU-activation-function,-2nd-is-the-same-except-has-64-filters-that-allows-the-model-to-extract-more-complex-patterns">1st layer has 32 filters of size 3x3 pixels and applies the ReLU activation function, 2nd is the same except has 64 filters that allows the model to extract more complex patterns<a class="anchor-link" href="#1st-layer-has-32-filters-of-size-3x3-pixels-and-applies-the-ReLU-activation-function,-2nd-is-the-same-except-has-64-filters-that-allows-the-model-to-extract-more-complex-patterns"> </a></h1><blockquote>
+<pre><code>emotion_model.add(Conv2D(32, kernel_size=(3,3), activation='relu', input_shape=(48,48,1)))
+emotion_model.add(Conv2D(64, kernel_size = (3,3), activation = 'relu'))</code></pre>
+</blockquote>
+<h1 id="Pooling-layers:Downsample-data-to-look-at-small-areas-of-the-image-(reduces-spatial-dimensions-while-retaining-important-features)&gt;-emotion_model.add(MaxPooling2D(pool_size=(2,2)))">Pooling layers:Downsample data to look at small areas of the image (reduces spatial dimensions while retaining important features)&gt; emotion_model.add(MaxPooling2D(pool_size=(2,2)))<a class="anchor-link" href="#Pooling-layers:Downsample-data-to-look-at-small-areas-of-the-image-(reduces-spatial-dimensions-while-retaining-important-features)&gt;-emotion_model.add(MaxPooling2D(pool_size=(2,2)))"> </a></h1><h1 id="Regularization:Randomly-sets-input-units-to-0-to-prevent-overfitting-(learn-noise-rather-than-actual-signal)&gt;-emotion_model.add(Dropout(0.25))">Regularization:Randomly sets input units to 0 to prevent overfitting (learn noise rather than actual signal)&gt; emotion_model.add(Dropout(0.25))<a class="anchor-link" href="#Regularization:Randomly-sets-input-units-to-0-to-prevent-overfitting-(learn-noise-rather-than-actual-signal)&gt;-emotion_model.add(Dropout(0.25))"> </a></h1><h1 id="More-convolutional/pooling-layers-and-regularization">More convolutional/pooling layers and regularization<a class="anchor-link" href="#More-convolutional/pooling-layers-and-regularization"> </a></h1><p>&gt;
+    emotion_model.add(Conv2D(128, kernel_size=(3,3), activation='relu'))
+    emotion_model.add(MaxPooling2D(pool_size=(2,2)))
+    emotion_model.add(Conv2D(128, kernel_size=(3,3), activation = 'relu'))
+    emotion_model.add(MaxPooling2D(pool_size=(2,2)))
+    emotion_model.add(Dropout(0.25))</p>
+<h1 id="Reshapes-ouput-from-previous-layers-into-1D-vector-to-prepare-for-the-fully-connected-layers">Reshapes ouput from previous layers into 1D vector to prepare for the fully connected layers<a class="anchor-link" href="#Reshapes-ouput-from-previous-layers-into-1D-vector-to-prepare-for-the-fully-connected-layers"> </a></h1><p>&gt;
+    emotion_model.add(Flatten())</p>
+<h1 id="1st-dense-layer:1024-neurons-fully-connected-layer&gt;-emotion_model.add(Dense(1024,-activation='relu'))">1st dense layer:1024 neurons fully connected layer&gt; emotion_model.add(Dense(1024, activation='relu'))<a class="anchor-link" href="#1st-dense-layer:1024-neurons-fully-connected-layer&gt;-emotion_model.add(Dense(1024,-activation='relu'))"> </a></h1>
+<pre><code>emotion_model.add(Dropout(0.5))
+
+</code></pre>
+<h1 id="2nd-dense-layer:7-neurons-which-represents-the-#-of-possible-output-classes-(emotions)#Uses-softmax-activation-function-to-convert-final-layer's-raw-predicted-values-into-a-probability-distribution-over-the-different-classes-for-classification">2nd dense layer:7 neurons which represents the # of possible output classes (emotions)#Uses softmax activation function to convert final layer's raw predicted values into a probability distribution over the different classes for classification<a class="anchor-link" href="#2nd-dense-layer:7-neurons-which-represents-the-#-of-possible-output-classes-(emotions)#Uses-softmax-activation-function-to-convert-final-layer's-raw-predicted-values-into-a-probability-distribution-over-the-different-classes-for-classification"> </a></h1><p>&gt;
+    emotion_model.add(Dense(7, activation='softmax'))</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2><mark>#6</mark> Compile the Model </h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>cd into src folder --&gt; python train.py in terminal 
+<em>compiling</em></li>
+</ul>
+<p><img src="https://i.imgur.com/0WzdMVU.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Dense layer: Each neuron in the layer is connected to EVERY neuron in the previous layer</li>
+<li>Drop out Layer: Randomly deactivates neurons to prevent a model that becomes too specialized and preforms extremely well on the training data but fails to generalize and make accurate predictions on new, unseen data </li>
+<li>Flatten layer: Takes complex, structured data (images) and makes its impler by converting it into a flat, 1D array. Useful when transitioning from convolutionl/pooling layers to subsequent layers to process the data as a simpler, linear sequence. Easier for NN to learn patterns and make predictions </li>
+<li>Keras: Sequential vs Functional<ul>
+<li>Sequential (Create model layer by layer)</li>
+<li>Functional (A layer can connect to any layer, much more complex)</li>
+</ul>
+</li>
+<li>CNN: Simple pplication of filter to an input that results in an activation. Certain inputs and thresholds. When Input meets those thresholds there is an activation </li>
+<li>Certain type of input --&gt; repeats itself --&gt; feature map forms</li>
+<li>Activation function: mathematical func that determines whether the neuron should be activated based on the input it recieves. Introduces non-linearity to the network, allowing it to learn and model complex relationships between input data and output predictions </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>emoji.py</p>
+<p>imports 
+install imagemagick</p>
+<p>Finished training</p>
+<p><img src="https://i.imgur.com/SkgIxW5.png" alt="" /></p>
+
+</div>
+</div>
+</div>
 &lt;/div&gt;
  
 
