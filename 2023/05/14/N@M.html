@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      10 min read
     
 </span></p>
 
@@ -138,10 +138,10 @@ window.onload = wrap_img;
 <li>Project Purpose/Description</li>
 <li>Tool/Environment Setup </li>
 <li>Theory Exploration (ML, NN, CNNs)</li>
-<li>Train data </li>
+<li>More imports &amp; Data Proprocessing</li>
 <li>Create Model</li>
 <li>Compile Model</li>
-<li>Train Model</li>
+<li>Create your emojis</li>
 <li>Implement GUI </li>
 <li>Debugging</li>
 <li>Reflection</li>
@@ -322,23 +322,120 @@ emotion_model.add(Conv2D(64, kernel_size = (3,3), activation = 'relu'))</code></
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2><mark>#6</mark> Compile the Model </h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<h2><mark>#6</mark> Compile the Model </h2><h1 id="Prepare-model-for-training-by-defining-how-it-will-measure-loss,-update-its-weights,-and-evaluate-its-prediction-performance">Prepare model for training by defining how it will measure loss, update its weights, and evaluate its prediction performance<a class="anchor-link" href="#Prepare-model-for-training-by-defining-how-it-will-measure-loss,-update-its-weights,-and-evaluate-its-prediction-performance"> </a></h1><blockquote><p>emotion_model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0001, decay=1e-6), metrics=['accuracy'])</p>
+</blockquote>
+<h1 id="Train-the-model-using-a-generator">Train the model using a generator<a class="anchor-link" href="#Train-the-model-using-a-generator"> </a></h1><p>&gt;
+    emotion_model_info = emotion_model.fit_generator(
+        train_generator,</p>
+
+<pre><code>    #Number of batches processed in each epoch
+    steps_per_epoch =28709 // 64,
+
+    #Number of times the entire dataset is passed through the model for training
+    epochs=50,
+
+    validation_data=validation_generator,
+
+    #Number of batches to be processed for validation in each epoch
+    validation_steps=7178 // 64 
+)
+
+</code></pre>
+<h1 id="Save-learned-parameters">Save learned parameters<a class="anchor-link" href="#Save-learned-parameters"> </a></h1><p>&gt;
+    emotion_model.save_weights('model.h5')</p>
+<hr />
+
+<p><b>Congratulations! All the code is in place, and you are now ready to compile and train your model!</b></p>
 <ul>
-<li>cd into src folder --&gt; python train.py in terminal 
-<em>compiling</em></li>
+<li>Go into your terminal and cd into the src folder</li>
+<li><p>Run the line below and watch your neural network slowly but surely go through the epoch 50 times! 
+&gt;
+  python train.py</p>
+</li>
+<li><p>The output should look something like this. Watch the loss decrease and the accuracy increase !</p>
+</li>
 </ul>
-<p><img src="https://i.imgur.com/0WzdMVU.png" alt="" /></p>
+<p>Start:&gt;<img src="https://i.imgur.com/0WzdMVU.png" alt="" /></p>
+<p>End:</p>
+<blockquote><p><img src="https://i.imgur.com/SkgIxW5.png" alt="" /></p>
+</blockquote>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2><mark>#7</mark> Fun! Create your personalized emojis :) </h2><p><b>Now is time to design our emojis that will match with our realtime human facial detection</b></p>
+<ul>
+<li>Follow this <a href="https://getavataaars.com/?accessoriesType=Blank&amp;avatarStyle=Transparent&amp;clotheColor=Red&amp;clotheType=BlazerSweater&amp;eyeType=Default&amp;hairColor=Black&amp;mouthType=Default&amp;topType=LongHairNotTooLong">link</a> and create 7 seperate emojis for each of the 7 emotions</li>
+<li>Save the images as angry.png, disgusted.png, fearful.png, happy.png, neutral.png, sad.png, surprised.png and place them in the "emojis" folder</li>
+</ul>
+<p>Here are some examples for inspo:</p>
+<p>Happy</p>
+<p><img src="https://i.imgur.com/eLvInGM.png" alt="" /></p>
+<p>Surprised</p>
+<p><img src="https://i.imgur.com/Kxz21Ci.png" alt="" /></p>
+<p>Disgusted</p>
+<p><img src="https://i.imgur.com/nVGEWFB.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2><mark>#8</mark> Implement GUI </h2><p>Now we will work in the <b>emoji.py</b></p>
+<h3>1. Import Packages</h3><p>&gt;
+    import tkinter as tk 
+    from tkinter import * 
+    import cv2 
+    from PIL import Image, ImageTk
+    import os
+    import numpy as np
+    import cv2 
+    from keras.models import Sequential 
+    from keras.layers import Dense, Dropout, Flatten 
+    from keras.layers import Conv2D
+    from keras.layers import MaxPooling2D
+    import threading</p>
+<h3>2. Code </h3><p>Copy the following from the train.py file
+&gt;</p>
+
+<pre><code>emotion_model = Sequential()
+
+emotion_model.add(Conv2D(32, kernel_size=(3,3), activation='relu', input_shape=(48,48,1)))
+emotion_model.add(Conv2D(64, kernel_size = (3,3), activation = 'relu'))
+
+emotion_model.add(MaxPooling2D(pool_size=(2,2)))
+
+emotion_model.add(Dropout(0.25))
+
+emotion_model.add(Conv2D(128, kernel_size=(3,3), activation='relu'))
+emotion_model.add(MaxPooling2D(pool_size=(2,2)))
+emotion_model.add(Conv2D(128, kernel_size=(3,3), activation = 'relu'))
+emotion_model.add(MaxPooling2D(pool_size=(2,2)))
+emotion_model.add(Dropout(0.25))
+
+emotion_model.add(Flatten())
+
+emotion_model.add(Dense(1024, activation='relu'))
+emotion_model.add(Dropout(0.5))
+
+emotion_model.add(Dense(7, activation='softmax'))
+emotion_model.load_weights('model.h5')</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>install imagemagick</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Extra notes</p>
 <ul>
 <li>Dense layer: Each neuron in the layer is connected to EVERY neuron in the previous layer</li>
 <li>Drop out Layer: Randomly deactivates neurons to prevent a model that becomes too specialized and preforms extremely well on the training data but fails to generalize and make accurate predictions on new, unseen data </li>
@@ -352,17 +449,6 @@ emotion_model.add(Conv2D(64, kernel_size = (3,3), activation = 'relu'))</code></
 <li>Certain type of input --&gt; repeats itself --&gt; feature map forms</li>
 <li>Activation function: mathematical func that determines whether the neuron should be activated based on the input it recieves. Introduces non-linearity to the network, allowing it to learn and model complex relationships between input data and output predictions </li>
 </ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>emoji.py</p>
-<p>imports 
-install imagemagick</p>
-<p>Finished training</p>
-<p><img src="https://i.imgur.com/SkgIxW5.png" alt="" /></p>
 
 </div>
 </div>
