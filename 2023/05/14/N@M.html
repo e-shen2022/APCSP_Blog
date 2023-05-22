@@ -143,6 +143,7 @@ window.onload = wrap_img;
 <li>Compile Model</li>
 <li>Create your emojis</li>
 <li>Implement GUI </li>
+<li>Testing &amp; Improving Accuracy </li>
 <li>Debugging</li>
 <li>Reflection</li>
 </ol>
@@ -157,7 +158,7 @@ window.onload = wrap_img;
 <p>We are going to create a machine learning algorithm, specifically a Convolutional Neural Network (CNN), with the platform Tensorflow to train the model based on this data to recognize facial expressions and map those same emotions on an emoji.</p>
 <blockquote><p>Integrating the model with the frontend should result in a functionality that looks like this!</p>
 </blockquote>
-<p><img src="https://i.imgur.com/XbjHSkG.png" alt="" /></p>
+<p><img src="https://i.imgur.com/qZwnblY.png" alt="" /></p>
 
 </div>
 </div>
@@ -397,7 +398,7 @@ emotion_model.add(Conv2D(64, kernel_size = (3,3), activation = 'relu'))</code></
     from keras.layers import Conv2D
     from keras.layers import MaxPooling2D
     import threading</p>
-<h3>2. Code </h3><p>Copy the following from the train.py file
+<h3>2. Copy Code </h3><p>Copy the following from the train.py file
 &gt;</p>
 
 <pre><code>emotion_model = Sequential()
@@ -421,7 +422,23 @@ emotion_model.add(Dense(1024, activation='relu'))
 emotion_model.add(Dropout(0.5))
 
 emotion_model.add(Dense(7, activation='softmax'))
-emotion_model.load_weights('model.h5')</code></pre>
+emotion_model.load_weights('model.h5')
+
+
+</code></pre>
+<h3>3. More code!</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2><mark>#9</mark> Testing &amp; Improving Accuracy</h2><ul>
+<li>Wear plain clothes, avoid graphics or images</li>
+<li>hair out of face</li>
+<li>One person in frame at a time</li>
+<li>Adjusting scalefactor and minNeighbors</li>
+<li>problems: can't tell difference between surprised/neutral/sad, focuses on eyes and not sensitive to mouth shape </li>
+</ul>
 
 </div>
 </div>
@@ -448,6 +465,19 @@ emotion_model.load_weights('model.h5')</code></pre>
 <li>CNN: Simple pplication of filter to an input that results in an activation. Certain inputs and thresholds. When Input meets those thresholds there is an activation </li>
 <li>Certain type of input --&gt; repeats itself --&gt; feature map forms</li>
 <li>Activation function: mathematical func that determines whether the neuron should be activated based on the input it recieves. Introduces non-linearity to the network, allowing it to learn and model complex relationships between input data and output predictions </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>learning moment</p>
+<ul>
+<li>syntax error stupid</li>
+<li>linux vs windows directory to find cv2</li>
+<li>video capture integrated cam can’t find but can use video</li>
+<li>adjusting scalefactor and minneighbors</li>
 </ul>
 
 </div>
