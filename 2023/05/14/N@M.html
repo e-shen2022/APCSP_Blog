@@ -433,12 +433,25 @@ emotion_model.load_weights('model.h5')
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2><mark>#9</mark> Testing &amp; Improving Accuracy</h2><ul>
+<li>record video, make sure in .mp4 </li>
 <li>Wear plain clothes, avoid graphics or images</li>
 <li>hair out of face</li>
 <li>One person in frame at a time</li>
 <li>Adjusting scalefactor and minNeighbors</li>
 <li>problems: can't tell difference between surprised/neutral/sad, focuses on eyes and not sensitive to mouth shape </li>
 </ul>
+<p>Accuracy</p>
+<ul>
+<li>Happy (Curve of mouth, Eyes are smaller) - GOOD </li>
+<li>Neutral (Flat line of mouth, eyebrows even, eyes not big) - OKAY </li>
+<li>Surprised (Form an O with mouth, big eyes) - OKAY </li>
+<li>Sad (Mouth curved down, smaller eyes) - OKAY </li>
+<li>Anger (?) - BAD </li>
+<li>Disgusted (?) - BAD </li>
+<li>Fearful (Wide eyes, mouth open) - BAD </li>
+</ul>
+<p>Retrain #1
+<img src="https://i.imgur.com/Xtc7wfM.png" alt="" /></p>
 
 </div>
 </div>
