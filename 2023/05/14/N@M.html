@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      15 min read
     
 </span></p>
 
@@ -173,7 +173,7 @@ window.onload = wrap_img;
 <li><p>Python Packages (Keras)</p>
 </li>
 </ul>
-<h3>1. VSCode Environment</h3><p>(a) Create a new folder in File Explorer and name it <em>Project Name</em>. Make sure you know the directory path</p>
+<h3>1. VSCode Environment</h3><p>(a) Create a new folder in File Explorer and name it <em>Project Name</em> in your C Drive (Directly in your OS folder)</p>
 <p>(b) Open the folder in VSCODE</p>
 <p>(c) Create a new folder called "src" and two new files called "train.py" and "emoji.py".</p>
 <p>(d) Now create 2 subfolders under "src" called "data" and "emojis".</p>
@@ -385,19 +385,22 @@ emotion_model.add(Conv2D(64, kernel_size = (3,3), activation = 'relu'))</code></
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2><mark>#8</mark> Implement GUI </h2><p>Now we will work in the <b>emoji.py</b></p>
-<h3>1. Import Packages</h3><p>&gt;
-    import tkinter as tk 
-    from tkinter import * 
-    import cv2 
-    from PIL import Image, ImageTk
-    import os
-    import numpy as np
-    import cv2 
-    from keras.models import Sequential 
-    from keras.layers import Dense, Dropout, Flatten 
-    from keras.layers import Conv2D
-    from keras.layers import MaxPooling2D
-    import threading</p>
+<h3>1. Import Packages</h3>
+&gt; import tkinter as tk 
+from tkinter import * 
+import cv2 
+from PIL import Image, ImageTk
+import os
+from cv2 import CAP_V4L2
+import numpy as np
+import cv2 
+from keras.models import Sequential 
+from keras.layers import Dense, Dropout, Flatten 
+from keras.layers import Conv2D
+from keras.layers import MaxPooling2D
+import threading 
+import time
+
 <h3>2. Copy Code </h3><p>Copy the following from the train.py file
 &gt;</p>
 
@@ -426,52 +429,260 @@ emotion_model.load_weights('model.h5')
 
 
 </code></pre>
-<h3>3. More code!</h3>
+<h3>3. Create dictionaries to later access emotion text and emojis</h3><blockquote>
+</blockquote>
+
+<pre><code>#Disable use of OpenCV
+cv2.ocl.setUseOpenCL(False)
+
+#Create dictionary of emotions 
+emotion_dict = {
+    0:"   Angry   ",         1: "   Disgusted   ", 
+    2: "   Fearful   ", 
+    3: "   Happy   ", 
+    4: "   Neutral   ", 
+    5: "   Sad   ", 
+    6: "   Surprised   "}
+
+#Generate path
+cur_path = os.path.dirname(os.path.abspath(__file__))
+
+#Navigate from current path into emojis folder and pick corresponding emotion
+emoji_dist = {
+    0: cur_path+"/emojis/angry.png",
+    1: cur_path+"/emojis/disgusted.png",
+    2: cur_path+"/emojis/fearful.png",
+    3: cur_path+"/emojis/happy.png",
+    4: cur_path+"/emojis/neutral.png",
+    5: cur_path+"/emojis/sad.png",
+    6: cur_path+"/emojis/surprised.png",
+}
+
+</code></pre>
+<h3> 4. Initialize variables and arrays </h3>
+&gt; #Stores the last captured video frame
+    global last_frame1
+    #Initializes array of 0s that will pass in image's RGB values 
+    last_frame1 = np.zeros((480, 640, 3), dtype=np.uint8)
+    global cap1 
+    #Initialize a list with a single element (index from emotion dictionary) 
+    show_text = [0] 
+    #Default emoji index (neutral)
+    show_text[0] = 4
+    #Event to synchronize subject and avatar threads
+    switch_thread_event = threading.Event()
+    #Event to signal the reads when to stop execution
+    stop_event = threading.Event()
+
+    # Debug counters
+    subject_count = 0 
+    avatar_count = 0
+
+<h3> 5. Create function to capture and read subject in frame</h3><blockquote>
+</blockquote>
+<h1 id="Function-to-capture-video-frames-from-webcam-and-detect-emotions-on-the-subject's-face">Function to capture video frames from webcam and detect emotions on the subject's face<a class="anchor-link" href="#Function-to-capture-video-frames-from-webcam-and-detect-emotions-on-the-subject's-face"> </a></h1><p>def show_subject():global subject_count</p>
+
+<pre><code>#While program still running
+while not stop_event.is_set():
+    # Wait for the switch thread event to be set
+    if not switch_thread_event.wait(5):
+        print("Subject Timeout occurred!")
+        break
+
+    #Open webcam
+    cap1 = cv2.VideoCapture(0)
+
+    if not cap1.isOpened():
+        print("Can't find the camera")
+    else:
+        print("Opened Camera")
+
+    # frame 1 captures the video frame by frame, flag1 returns frame status 
+    flag1, frame1 = cap1.read()
+
+    #Resize frame for faster processing
+    frame1 = cv2.resize(frame1, (600,500))
+
+    #Haarcascade classifier detects face in frame using pretrained info ab facial features
+    bounding_box = cv2.CascadeClassifier('C:\Emojify\data\haarcascade_frontalface_default.xml')
+    #Converted to grayscale for better face detection accuracy
+    gray_frame = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
+
+    #Note: Adjust scaleFactor and minNeighbors for prediction accuracy 
+    #detectMultiScale function returns the coordinates and dimensions of the detected faces as rectangles
+    num_faces = bounding_box.detectMultiScale(gray_frame, scaleFactor = 1.1, minNeighbors=7)
+
+    #For each detected face, a rectangle is drawn around it on the frame
+    for (x, y, w, h) in num_faces: 
+        cv2.rectangle(frame1, (x, y-50), (x+w, y+h+10), (255, 0, 0), 2)
+        roi_gray_frame = gray_frame[y:y+h, x:x+w]
+        #Region of interest resized to the expected input size for the emotion recognition model
+        #Face image converted into a numpy array
+        cropped_img = np.expand_dims(np.expand_dims(cv2.resize(roi_gray_frame, (48, 48)), -1), 0)
+        #Face image is passed through the pre-trained emotion recognition model 
+        #Predict function returns a probability distribution over different emotion classes
+        prediction = emotion_model.predict(cropped_img)
+        #Index of the highest probability in the prediction array is calculated to determine the predicted emotion class
+        maxindex = int(np.argmax(prediction))
+        #Retrieve emotion label &amp; display (subject)
+        #Corresponding emotion label is retrieved from the emotion_dict dictionary &amp; displayed in window
+        cv2.putText(frame1, emotion_dict[maxindex], (x+40, y-60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
+
+        show_text[0]=maxindex
+
+        #For debugging
+        current_time_ms = time.time_ns() // 10**6
+        subject_count = subject_count + 1 
+        print("Current time for subject", current_time_ms, show_text[0], subject_count)
+
+    print("flag1", flag1)
+
+    #If frame is not returned
+    if flag1 is None:
+        print("Major error! Frame is not returned!")
+    #If frame captured successfully 
+    elif flag1 == True:
+        global last_frame1
+        last_frame1 = frame1.copy()
+        pic = cv2.cvtColor(last_frame1, cv2.COLOR_BGR2RGB)
+        img = Image.fromarray(pic)
+        #Represents image element in GUI
+        imgtk = ImageTk.PhotoImage(image=img)
+        #Updates displayed image
+        lmain.imgtk = imgtk
+        lmain.configure(image=imgtk)
+
+    # After loop release webcam to be used in this program
+    #cap1.release()
+    # Destroy all the windows
+    cv2.destroyAllWindows()
+    #Never prints bc webcam not released 
+    print('webcam destroyed')
+
+    #Once process frame, pause for a bit
+    time.sleep(0.3)
+    #Update window
+    root.update()
+
+    # Reset the switch_thread_event
+    switch_thread_event.clear()
+    switch_thread_event.set()
+
+print("Subject thread is finished")
+
+</code></pre>
+<p><h3> 6. Create avatar function to sink subject emotions with displayed emoji</h3></p>
+<blockquote><p>def show_avatar():global avatar_count
+    while not stop_event.is_set():</p>
+
+<pre><code>    # Wait for the switch_thread_event to be set
+    if not switch_thread_event.wait(5):
+        print("Avatar Timeout occurred!")
+        break</code></pre>
+</blockquote>
+
+<pre><code>    #More debugging
+    emoji_index = show_text[0]
+    avatar_count = avatar_count + 1 
+    current_time_ms = time.time_ns() // 10**6
+    print("Current time for avatar", current_time_ms, emoji_index, avatar_count)
+
+    frame2 = cv2.imread(emoji_dist[emoji_index])
+    pic2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2RGB)
+    img2 = Image.fromarray(pic2)
+    imgtk2 = ImageTk.PhotoImage(image=img2)
+    lmain2.imgtk2 = imgtk2
+    lmain3.configure(text = emotion_dict[emoji_index], font = ('arial', 45, 'bold'))
+    lmain2.configure(image=imgtk2)
+
+    time.sleep(0.3)
+    root.update()
+
+    # Reset the switch_thread_event
+    switch_thread_event.clear()
+    switch_thread_event.set()
+
+print ("Avatar thread is finished")
+
+</code></pre>
+<p><h3> 7. Wrapper functions to call stop and switch tread functions</h3></p>
+<blockquote><p>def stop_threads():global stop_event        global switch_thread_event</p>
+
+<pre><code>    #Stop events, clear threads
+    stop_event.set()
+    switch_thread_event.clear()</code></pre>
+</blockquote>
+
+<pre><code>def wrapper_quit():
+    stop_threads()
+    print("After stop camera thread ", stop_event.is_set(), switch_thread_event.is_set())
+    #Close GUI window
+    root.destroy()
+
+</code></pre>
+<p><h3> 8. if main &amp; using tkInter to display frontend by placing and packing labels</h3></p>
+<blockquote><h1 id="Only-be-executed-if-script-run-directly">Only be executed if script run directly<a class="anchor-link" href="#Only-be-executed-if-script-run-directly"> </a></h1><p>if <strong>name</strong> == '<strong>main</strong>':frame_number = 0    root = tk.Tk()</p>
+</blockquote>
+
+<pre><code>#Create labels to contain images/video
+#Human video
+lmain = tk.Label(master = root, padx = 50, bd = 10)
+#Emoji
+lmain2 = tk.Label(master = root, bd = 25)
+#Quit button for entire program
+lmain3 = tk.Label(master=root, bd = 20, fg = "#CDCDCD", bg = 'blue', font=("Arial", 30))
+
+#Packing and placing in location 
+lmain.pack(side=LEFT)
+lmain.place(x = 30, y = 100)
+lmain3.pack()
+lmain3.place(x = 1000, y = 600)
+lmain2.pack(side=RIGHT)
+lmain2.place(x = 700, y = 100)
+
+root.title("Translating Realtime Human Facial Expressions to an Emoji using a Trained CNN")
+root.geometry("1400x900+100+10")
+root['bg'] = 'black'
+switch_thread_event.set() 
+subject_thread = threading.Thread(target = show_subject)
+avatar_thread = threading.Thread(target = show_avatar)
+#When button pressed, function specified by command parameter will be executed
+exitButton = Button(root, text = 'Quit', fg = "red", command = wrapper_quit, font = ('arial', 30, 'bold')).pack(side = TOP)
+
+subject_thread.start()
+avatar_thread.start()
+
+print("Before main loop")
+root.mainloop()</code></pre>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2><mark>#9</mark> Testing &amp; Improving Accuracy</h2><ul>
-<li>record video, make sure in .mp4 </li>
-<li>Wear plain clothes, avoid graphics or images</li>
-<li>hair out of face</li>
-<li>One person in frame at a time</li>
-<li>Adjusting scalefactor and minNeighbors</li>
-<li>problems: can't tell difference between surprised/neutral/sad, focuses on eyes and not sensitive to mouth shape </li>
+<h2><mark>#9</mark> Testing &amp; Improving Accuracy</h2><p><b> Do a happy dance! You have now officially coded the base to start testing your final product!</b></p>
+<ul>
+<li>Run python3 emoji.py in terminal and watch magic happen!</li>
 </ul>
-<p>Accuracy</p>
+<p>Some advise about <mark>improving accuracy</mark></p>
+<ul>
+<li>Subject: Wear plain clothes (avoid graphics), Hair out of face, One person in frame at a time, ONLY use face to change expression (face detection XML file doesn't take into account hands or any other body parts)</li>
+<li>Adjust scalefactor and minNeighbors in emoji.py </li>
+<li>Consider adding more diverse photos in data set and retraining the model </li>
+</ul>
+<p>NOTES about the model</p>
+<ol>
+<li>Accuracy of certain facial expressions </li>
+</ol>
 <ul>
 <li>Happy (Curve of mouth, Eyes are smaller) - GOOD </li>
+<li>Surprised (Form an O with mouth, big eyes) - GOOD </li>
 <li>Neutral (Flat line of mouth, eyebrows even, eyes not big) - OKAY </li>
-<li>Surprised (Form an O with mouth, big eyes) - OKAY </li>
 <li>Sad (Mouth curved down, smaller eyes) - OKAY </li>
-<li>Anger (?) - BAD </li>
-<li>Disgusted (?) - BAD </li>
-<li>Fearful (Wide eyes, mouth open) - BAD </li>
+<li>Anger (exaggerated frustrated eyebrows and mouth curved downword) - OKAY</li>
+<li>Disgusted - BAD RARELY DETECTS </li>
+<li>Fearful (Wide eyes, mouth open) - BAD, EASILY CONFUSED WITH SURPRISED</li>
 </ul>
-<p>Retrain #1
-<img src="https://i.imgur.com/Xtc7wfM.png" alt="" /></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Biggest revelation ever about why camera not popping up</p>
-<ol>
-<li>VScode environment cannot access video hardware, moved from linux to windows environment (moved all files to C: drive) so that operating system can directly access firmware OpenCV</li>
-<li>Changed code to use webcam and not video</li>
-</ol>
-<p>C:\Users\aimas&gt;pip3 install tensorflow</p>
-<p>C:\Emojify&gt;python3 emoji.py</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>install imagemagick</p>
 
 </div>
 </div>
@@ -491,19 +702,6 @@ emotion_model.load_weights('model.h5')
 <li>CNN: Simple pplication of filter to an input that results in an activation. Certain inputs and thresholds. When Input meets those thresholds there is an activation </li>
 <li>Certain type of input --&gt; repeats itself --&gt; feature map forms</li>
 <li>Activation function: mathematical func that determines whether the neuron should be activated based on the input it recieves. Introduces non-linearity to the network, allowing it to learn and model complex relationships between input data and output predictions </li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>learning moment</p>
-<ul>
-<li>syntax error stupid</li>
-<li>linux vs windows directory to find cv2</li>
-<li>video capture integrated cam can’t find but can use video</li>
-<li>adjusting scalefactor and minneighbors</li>
 </ul>
 
 </div>
